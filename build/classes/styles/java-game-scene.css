@@ -1,0 +1,485 @@
+/* Стили для игровой сцены с персонажем и островами */
+
+/* ===== ОВЕРЛЕЙ УРОВНЯ НА АВАТАРЕ ===== */
+.level-overlay {
+    -fx-padding: 2px;
+    padding: 2px;
+}
+
+.level-badge-small {
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-background-color: #1a1a2e;
+    background-color: #1a1a2e;
+    -fx-background-radius: 8px;
+    border-radius: 8px;
+    -fx-padding: 2px;
+    padding: 2px;
+    -fx-border-color: #333333;
+    border-color: #333333;
+    -fx-border-width: 1px;
+    border-width: 1px;
+}
+
+.level-text-small {
+    -fx-font-size: 8px;
+    font-size: 8px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+/* ===== ЦВЕТНЫЕ ИКОНКИ СТАТУСОВ ===== */
+.status-icon-hp {
+    -fx-font-size: 18px;
+    font-size: 18px;
+    -fx-text-fill: #e74c3c;
+    color: #e74c3c;
+    -fx-effect: dropshadow(gaussian, #e74c3c, 3, 0.5, 0, 0);
+}
+
+.status-icon-exp {
+    -fx-font-size: 18px;
+    font-size: 18px;
+    -fx-text-fill: #f39c12;
+    color: #f39c12;
+    -fx-effect: dropshadow(gaussian, #f39c12, 3, 0.5, 0, 0);
+}
+
+/* ===== ЦЕНТРИРОВАННЫЙ ТЕКСТ С ТЕНЬЮ ===== */
+.hp-text-centered {
+    -fx-font-size: 10px;
+    font-size: 10px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.5, 0, 0);
+}
+
+.exp-text-centered {
+    -fx-font-size: 10px;
+    font-size: 10px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.5, 0, 0);
+}
+
+/* ===== ПРИГЛУШЕННАЯ РАМКА БЛОКА ===== */
+.character-panel {
+    background-color: #1a1a2e;
+    -fx-background-color: #1a1a2e;
+    -fx-background-radius: 8px;
+    border-radius: 8px;
+    -fx-border-color: #a58d08;
+    border-color: #976e15;
+    -fx-border-width: 1px;
+    border-width: 1px;
+    -fx-padding: 8px;
+    padding: 8px;
+    -fx-effect: dropshadow(gaussian, #000000, 5, 0.3, 0, 0);
+}
+
+.character-title {
+    -fx-font-size: 16px;
+    font-size: 16px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #00ff00;
+    color: #00ff00;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-effect: dropshadow(gaussian, #00ff00, 5, 0.5, 0, 0);
+}
+
+.level-badge {
+    -fx-font-size: 20px;
+    font-size: 20px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-background-color: #e74c3c;
+    background-color: #e74c3c;
+    -fx-background-radius: 15px;
+    border-radius: 15px;
+    -fx-padding: 5px;
+    padding: 5px;
+    -fx-border-color: #ffffff;
+    border-color: #ffffff;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-effect: dropshadow(gaussian, #e74c3c, 8, 0.5, 0, 0);
+}
+
+.level-text {
+    -fx-font-size: 10px;
+    font-size: 10px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.avatar-container {
+    -fx-background-color: #2d3748;
+    background-color: #2d3748;
+    -fx-background-radius: 8px;
+    border-radius: 8px;
+    -fx-border-color: #885c0a;
+    border-color: #a07b14;
+    -fx-border-width: 1px;
+    border-width: 1px;
+}
+
+.avatar-icon {
+    -fx-font-size: 32px;
+    font-size: 32px;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+}
+
+.character-name {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.character-class {
+    -fx-font-size: 11px;
+    font-size: 11px;
+    -fx-text-fill: #f39c12;
+    color: #f39c12;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-font-style: italic;
+    font-style: italic;
+}
+
+.status-icon {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+}
+
+.health-bar-compact {
+    -fx-accent: #e74c3c;
+    -fx-background-color: #2d3748;
+    background-color: #2d3748;
+    -fx-background-radius: 6px;
+    border-radius: 6px;
+    -fx-background-insets: 1;
+    -fx-max-width: 160px;
+    -fx-pref-width: 160px;
+    -fx-min-width: 160px;
+}
+
+.exp-bar-compact {
+    -fx-accent: #f39c12;
+    -fx-background-color: #2d3748;
+    background-color: #2d3748;
+    -fx-background-radius: 6px;
+    border-radius: 6px;
+    -fx-background-insets: 1;
+    -fx-max-width: 160px;
+    -fx-pref-width: 160px;
+    -fx-min-width: 160px;
+}
+
+.hp-text {
+    -fx-font-size: 10px;
+    font-size: 10px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.exp-text {
+    -fx-font-size: 10px;
+    font-size: 10px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.panel-title {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #00ff00;
+    color: #00ff00;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.panel-separator {
+    -fx-background-color: #cccccc;
+    background-color: #cccccc;
+    -fx-background-color: #00ff00;
+    background-color: #00ff00;
+    -fx-opacity: 0.3;
+    opacity: 0.3;
+}
+
+.character-name {
+    -fx-font-size: 16px;
+    font-size: 16px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.character-class {
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-text-fill: #f39c12;
+    color: #f39c12;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-font-style: italic;
+    font-style: italic;
+}
+
+/* ===== СТАТИСТИКА ПЕРСОНАЖА ===== */
+.stat-label-small {
+    -fx-font-size: 10px;
+    font-size: 10px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #FFF8DC;
+    color: #FFF8DC;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.stat-value-large {
+    -fx-font-size: 18px;
+    font-size: 18px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #cccccc;
+    color: #cccccc;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-effect: dropshadow(gaussian, #cccccc, 5, 0.5, 0, 0);
+}
+
+.stat-value-small {
+    -fx-font-size: 11px;
+    font-size: 11px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+/* ===== ПРОГРЕСС-БАРЫ ===== */
+.experience-bar {
+    -fx-accent: #9b59b6;
+    -fx-background-color: #2d3748;
+    background-color: #2d3748;
+    -fx-background-radius: 10px;
+    border-radius: 10px;
+    -fx-background-insets: 2;
+}
+
+.health-bar {
+    -fx-accent: #e74c3c;
+    -fx-background-color: #2d3748;
+    background-color: #2d3748;
+    -fx-background-radius: 10px;
+    border-radius: 10px;
+    -fx-background-insets: 2;
+}
+
+/* ===== ПАНЕЛЬ МОБОВ ===== */
+.mob-scroll-pane {
+    -fx-background-color: transparent;
+    /* Убираем дефолтные серые рамки самого ScrollPane */
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.mob-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+
+/* ===== КНОПКИ УПРАВЛЕНИЯ ===== */
+.primary-button {
+    -fx-background-color: #4A5568;
+    background-color: #4A5568;
+    -fx-text-fill: #FFFFFF;
+    color: #FFFFFF;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-border-color: #1E3A8A;
+    border-color: #1E3A8A;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-border-radius: 20px;
+    border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 12px 20px;
+    padding: 12px 20px;
+    -fx-cursor: hand;
+    cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0.3, 0, 0);
+}
+
+.primary-button:hover {
+    -fx-background-color: #5A67D8;
+    background-color: #5A67D8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0.3, 0, 0);
+}
+
+.secondary-button {
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321);
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    
+    /* РЕШЕНИЕ: Снижаем шрифт до 13px и делаем отступы компактнее */
+    -fx-font-size: 13px; 
+    -fx-padding: 8px 14px; 
+    
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.4), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #666666;
+    background-color: #666666;
+    -fx-effect: dropshadow(gaussian, #888888, 5, 0.5, 0, 0);
+}
+
+/* ===== СТИЛИ КНОПКИ МАГАЗИНА ===== */
+.shop-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    font-size: 16px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-background-color: #1a1a2e;
+    background-color: #1a1a2e;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-border-color: #ffd700;
+    border-color: #ffd700;
+    -fx-border-width: 3px;
+    border-width: 3px;
+    -fx-border-radius: 15px;
+    border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 12px 30px;
+    padding: 12px 30px;
+    -fx-cursor: hand;
+    cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.4), 10, 0, 0, 5);
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-text-alignment: center;
+}
+
+/* ===== КОМПАКТНАЯ КНОПКА БОЯ ДЛЯ МОБОВ ===== */
+/* Присвой этот стиль кнопкам "БОЙ" вместо .secondary-button */
+.mob-battle-button {
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321);
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Consolas', monospace;
+    -fx-font-size: 12px;           /* Чуть меньше шрифт */
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-padding: 4px 12px;         /* Тонкие отступы сжатые по вертикали и горизонтали */
+    -fx-min-width: 75px;           /* Гарантирует, что кнопка будет миниатюрной */
+    -fx-cursor: hand;
+}
+
+.mob-battle-button:hover {
+    -fx-background-color: #a0522d;
+    -fx-border-color: #ffed4e;
+}
+
+.mob-battle-button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.shop-button:hover {
+    -fx-background-color: #2d2d47;
+    background-color: #2d2d47;
+    -fx-border-color: #ffed4e;
+    border-color: #ffed4e;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.6), 15, 0, 0, 8);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-translate-x: 2;
+    -fx-translate-y: -2;
+}
+
+.shop-button:pressed {
+    -fx-background-color: #0f0f1e;
+    background-color: #0f0f1e;
+    -fx-border-color: #ffd700;
+    border-color: #ffd700;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-translate-x: 0;
+    -fx-translate-y: 2;
+}
+
+.shop-button:focused {
+    -fx-border-color: #ffffff;
+    border-color: #ffffff;
+    -fx-border-width: 4px;
+    border-width: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 12, 0, 0, 6);
+}

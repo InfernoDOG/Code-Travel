@@ -1,0 +1,219 @@
+/* Тема для экрана создания персонажа - CHARACTER CREATION MODE */
+
+/* ===== ГЛОБАЛЬНЫЕ СТИЛИ ===== */
+.main-container {
+    background-color: #1a1a2e;
+    -fx-background-color: #1a1a2e;
+    padding: 20px;
+    -fx-padding: 20px;
+}
+
+/* ===== СТИЛИ ДЛЯ СОЗДАНИЯ ПЕРСОНАЖА ===== */
+.input-field {
+    background-color: #2d3748;
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-border-color: #34495e;
+    border-color: #34495e;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-background-radius: 6px;
+    border-radius: 6px;
+    -fx-padding: 8px;
+    padding: 8px;
+}
+
+.combo-box {
+    background-color: #2d3748;
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-border-color: #34495e;
+    border-color: #34495e;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-background-radius: 6px;
+    border-radius: 6px;
+    -fx-padding: 8px;
+    padding: 8px;
+}
+
+.description-text {
+    -fx-text-fill: #FFFFFF;
+    color: #FFFFFF;
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    -fx-wrap-text: true;
+    word-wrap: break-word;
+    -fx-padding: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    -fx-padding: 10px;
+    padding: 10px;
+    -fx-border-color: #4A5568;
+    border-color: #4A5568;
+    -fx-border-width: 1px;
+    border-width: 1px;
+    -fx-wrap-text: true;
+    word-wrap: break-word;
+}
+
+.description-text .content {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.description-text .viewport {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.description-text .scroll-pane {
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: never;
+    -fx-fit-to-width: true;
+}
+
+.description-text .scroll-bar:vertical {
+    -fx-opacity: 0;
+    opacity: 0;
+}
+
+.description-text .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    opacity: 0;
+}
+
+.stat-label {
+    -fx-text-fill: #ecf0f1;
+    color: #ecf0f1;
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.stat-value {
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+/* ===== ЦВЕТНЫЕ СТАТЫ ===== */
+.strength-bar {
+    -fx-accent: #e74c3c;
+    -fx-background-radius: 5px;
+}
+
+.intelligence-bar {
+    -fx-accent: #3498db;
+    -fx-background-radius: 5px;
+}
+
+.agility-bar {
+    -fx-accent: #f39c12;
+    -fx-background-radius: 5px;
+}
+
+.stats-container {
+    background-color: rgba(0, 255, 0, 0.1);
+    -fx-background-color: rgba(0, 255, 0, 0.1);
+    -fx-background-radius: 8px;
+    border-radius: 8px;
+    -fx-padding: 15px;
+    padding: 15px;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.character-title-text {
+    -fx-font-size: 32px;
+    font-size: 32px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    color: #FFFFFF;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+/* ===== КНОПКИ В СТИЛЕ БОЯ ===== */
+.primary-button {
+    -fx-background-color: #4A5568 !important;
+    background-color: #4A5568 !important;
+    -fx-text-fill: #FFFFFF !important;
+    color: #FFFFFF !important;
+    -fx-font-size: 14px !important;
+    font-size: 14px !important;
+    -fx-font-weight: bold !important;
+    -fx-border-color: #2D3748 !important;
+    border-color: #2D3748 !important;
+    -fx-border-width: 2px !important;
+    border-width: 2px !important;
+    -fx-background-radius: 6px !important;
+    border-radius: 6px !important;
+    -fx-padding: 10px 20px !important;
+    padding: 10px 20px !important;
+    -fx-cursor: hand !important;
+    cursor: pointer !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0.3, 0, 0) !important;
+}
+
+.primary-button:hover {
+    -fx-background-color: #5A67D8 !important;
+    background-color: #5A67D8 !important;
+    -fx-border-color: #4C51BF !important;
+    border-color: #4C51BF !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0.3, 0, 0) !important;
+}
+
+.secondary-button {
+    -fx-background-color: #555555 !important;
+    background-color: #555555 !important;
+    -fx-text-fill: #ffffff !important;
+    color: #ffffff !important;
+    -fx-font-size: 14px !important;
+    font-size: 14px !important;
+    -fx-font-weight: bold !important;
+    -fx-border-color: #444444 !important;
+    border-color: #444444 !important;
+    -fx-border-width: 2px !important;
+    border-width: 2px !important;
+    -fx-background-radius: 6px !important;
+    border-radius: 6px !important;
+    -fx-padding: 10px 20px !important;
+    padding: 10px 20px !important;
+    -fx-cursor: hand !important;
+    cursor: pointer !important;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #666666 !important;
+    background-color: #666666 !important;
+    -fx-border-color: #888888 !important;
+    border-color: #888888 !important;
+    -fx-effect: dropshadow(gaussian, #888888, 5, 0.5, 0, 0) !important;
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ===== */
+.sub-title {
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    color: #FFFFFF;
+    -fx-opacity: 0.8;
+    opacity: 0.8;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}

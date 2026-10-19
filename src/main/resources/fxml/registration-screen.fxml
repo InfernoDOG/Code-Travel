@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.codetravel.ui.RegistrationController"
+           styleClass="auth-container" maxWidth="Infinity" maxHeight="Infinity">
+    
+    <!-- Фон как в главном меню -->
+    <StackPane styleClass="auth-background">
+        <VBox alignment="CENTER" maxWidth="400" maxHeight="700" spacing="20">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+            
+            <!-- Заголовок CODE TRAVEL -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="CODE TRAVEL" styleClass="auth-title"/>
+                <Label text="Регистрация нового пользователя" styleClass="auth-subtitle"/>
+            </VBox>
+            
+            <!-- Основной контейнер формы -->
+            <VBox fx:id="mainContainer" alignment="CENTER" spacing="15">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+                
+                <!-- Поле имени пользователя -->
+                <VBox spacing="8">
+                    <Label text="Имя пользователя:" styleClass="field-label"/>
+                    <TextField fx:id="usernameField" maxWidth="Infinity"/>
+                </VBox>
+                
+                <!-- Поле email -->
+                <VBox spacing="8">
+                    <Label text="Email:" styleClass="field-label"/>
+                    <TextField fx:id="emailField" maxWidth="Infinity"/>
+                </VBox>
+                
+                <!-- Поле пароля -->
+                <VBox spacing="8">
+                    <Label text="Пароль:" styleClass="field-label"/>
+                    <PasswordField fx:id="passwordField" maxWidth="Infinity"/>
+                </VBox>
+                
+                <!-- Поле подтверждения пароля -->
+                <VBox spacing="8">
+                    <Label text="Подтвердите пароль:" styleClass="field-label"/>
+                    <PasswordField fx:id="confirmPasswordField" maxWidth="Infinity"/>
+                </VBox>
+                
+                <!-- Кнопки -->
+                <VBox spacing="15">
+                    <Button fx:id="registerButton" text="ЗАРЕГИСТРИРОВАТЬСЯ" maxWidth="Infinity" prefHeight="50" onAction="#handleRegister"/>
+                    <Button fx:id="backButton" text="НАЗАД" maxWidth="Infinity" prefHeight="40" onAction="#handleBack"/>
+                </VBox>
+                
+                <!-- Сообщение об ошибке -->
+                <Label fx:id="errorLabel" text="" visible="false" wrapText="true" 
+                       maxWidth="Infinity" alignment="CENTER"/>
+            </VBox>
+            
+            <!-- Версия -->
+            <Label text="Версия Alpha 1.2 - Учись программированию в битвах!" 
+                   styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+        </VBox>
+    </StackPane>
+    
+</StackPane>

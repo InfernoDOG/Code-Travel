@@ -1,0 +1,67 @@
+/* ===== RPG-STYLE SCROLLBAR ===== */
+
+/* Основная полоса прокрутки */
+.scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* Трек прокрутки (дорожка) */
+.scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: linear-gradient(to right, #8B4513, #654321);
+    -fx-background-insets: 0;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-pref-width: 12px;
+}
+
+/* Ползунок (thumb) в стиле RPG */
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to right, #FFD700, #FFA500);
+    -fx-background-insets: 2px;
+    -fx-background-radius: 6px;
+    -fx-border-color: #8B4513;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-pref-width: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 4, 0.4, 0, 0);
+}
+
+/* Ползунок при наведении */
+.scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: linear-gradient(to right, #FFA500, #FF8C00);
+    -fx-effect: dropshadow(gaussian, rgba(255, 165, 0, 0.4), 6, 0.5, 0, 0);
+}
+
+/* Ползунок при нажатии */
+.scroll-pane .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: linear-gradient(to right, #654321, #8B4513);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 3, 0.3, 0, 0);
+}
+
+/* Горизонтальная прокрутка (скрываем) */
+.scroll-pane .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+/* Углы прокрутки */
+.scroll-pane .scroll-bar:vertical .increment-button,
+.scroll-pane .scroll-bar:vertical .decrement-button {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+/* ===== RPG-STYLE CONTENT ===== */
+
+/* Полупрозрачный контейнер */
+.rpg-container {
+    -fx-background-color: rgba(26, 26, 46, 0.85);
+    -fx-background-radius: 15px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 20, 0.8, 0, 0);
+}

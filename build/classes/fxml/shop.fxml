@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" styleClass="main-container" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetravel.ui.ShopController">
+    
+    <!-- ЗАГОЛОВОК МАГАЗИНА -->
+    <top>
+        <VBox alignment="CENTER" spacing="8" styleClass="header-section">
+            <padding>
+                <Insets bottom="10" left="15" right="15" top="15" />
+            </padding>
+            <Label styleClass="title-text" text="🛒 МАГАЗИН" />
+            <Label fx:id="playerCoinsLabel" styleClass="subtitle-text" text="💰 Монеты: 100" />
+        </VBox>
+    </top>
+    
+    <!-- ЗОНА ТОВАРОВ -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="content-scroll" vbarPolicy="AS_NEEDED" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" maxWidth="Infinity" spacing="10" styleClass="content-container">
+                <padding>
+                    <Insets bottom="10" left="15" right="15" top="10" />
+                </padding>
+                
+                <!-- Раздел "Зелья" -->
+                <VBox spacing="8" styleClass="section-box">
+                    <Label styleClass="section-title" text="🧪 Зелья" />
+                    <GridPane hgap="12" styleClass="items-grid" vgap="8">
+                        <!-- Зелье здоровья -->
+                        <Label styleClass="item-icon" text="❤" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+                            <Label styleClass="item-name" text="Зелье здоровья" />
+                            <Label styleClass="item-desc" text="Восстанавливает 50 HP" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="healthPotionPrice" styleClass="item-price" text="💰 50" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Button fx:id="buyHealthPotion" styleClass="primary-button-small" text="💵" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        
+                        <!-- Зелье опыта -->
+                        <Label styleClass="item-icon" text="⭐" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                            <Label styleClass="item-name" text="Зелье опыта" />
+                            <Label styleClass="item-desc" text="+100 опыта" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="expPotionPrice" styleClass="item-price" text="💰 75" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buyExpPotion" styleClass="primary-button-small" text="💵" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        
+                        <!-- Зелье силы -->
+                        <Label styleClass="item-icon" text="💪" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+                            <Label styleClass="item-name" text="Зелье силы" />
+                            <Label styleClass="item-desc" text="+20% к урону" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="strengthPotionPrice" styleClass="item-price" text="💰 100" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="buyStrengthPotion" styleClass="primary-button-small" text="💵" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+                
+                <!-- Раздел "Предметы" -->
+                <VBox spacing="8" styleClass="section-box">
+                    <Label styleClass="section-title" text="🎒 Предметы" />
+                    <GridPane hgap="12" styleClass="items-grid" vgap="8">
+                        <!-- Меч кодера -->
+                        <Label styleClass="item-icon" text="⚔" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+                            <Label styleClass="item-name" text="Меч кодера" />
+                            <Label styleClass="item-desc" text="+15 урона в бою" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="coderSwordPrice" styleClass="item-price" text="💰 150" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Button fx:id="buyCoderSword" styleClass="primary-button-small" text="💵" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        
+                        <!-- Щит программиста -->
+                        <Label styleClass="item-icon" text="🛡" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                            <Label styleClass="item-name" text="Щит программиста" />
+                            <Label styleClass="item-desc" text="-25% получаемого урона" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="programmerShieldPrice" styleClass="item-price" text="💰 125" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buyProgrammerShield" styleClass="primary-button-small" text="💵" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        
+                        <!-- Артефакт отладчика -->
+                        <Label styleClass="item-icon" text="🔮" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+                            <Label styleClass="item-name" text="Артефакт отладчика" />
+                            <Label styleClass="item-desc" text="Авто-решение заданий" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="debuggerArtPrice" styleClass="item-price" text="💰 300" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="buyDebuggerArt" styleClass="primary-button-small" text="💵" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+                
+                <!-- Раздел "Улучшения" -->
+                <VBox spacing="8" styleClass="section-box">
+                    <Label styleClass="section-title" text="⬆️ Улучшения" />
+                    <GridPane hgap="12" styleClass="items-grid" vgap="8">
+                        <!-- Улучшение HP -->
+                        <Label styleClass="item-icon" text="♡" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                            <Label styleClass="item-name" text="Улучшение HP" />
+                            <Label styleClass="item-desc" text="+25 к макс. здоровью" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="hpUpgradePrice" styleClass="item-price" text="💰 200" GridPane.columnIndex="2" />
+                        <Button fx:id="buyHpUpgrade" styleClass="primary-button-small" text="⬆️" GridPane.columnIndex="3" />
+                        
+                        <!-- Улучшение урона -->
+                        <Label styleClass="item-icon" text="⚔" GridPane.rowIndex="1" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                            <Label styleClass="item-name" text="Улучшение урона" />
+                            <Label styleClass="item-desc" text="+10% к урону навсегда" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="damageUpgradePrice" styleClass="item-price" text="💰 250" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buyDamageUpgrade" styleClass="primary-button-small" text="⬆️" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        
+                        <!-- Улучшение опыта -->
+                        <Label styleClass="item-icon" text="🌟" GridPane.rowIndex="2" />
+                        <VBox spacing="2" styleClass="item-info" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+                            <Label styleClass="item-name" text="Улучшение опыта" />
+                            <Label styleClass="item-desc" text="+25% к опыту навсегда" wrapText="true" />
+                        </VBox>
+                        <Label fx:id="expUpgradePrice" styleClass="item-price" text="💰 225" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="buyExpUpgrade" styleClass="primary-button-small" text="⬆️" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+                
+            </VBox>
+        </ScrollPane>
+    </center>
+    
+    <!-- НИЖНЯЯ ПАНЕЛЬ -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" styleClass="footer-section">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="10" />
+            </padding>
+            <Button fx:id="backButton" maxWidth="Infinity" styleClass="secondary-button" text="🔙 ВЕРНУТЬСЯ В ИГРУ" />
+            <Label fx:id="messageLabel" maxWidth="Infinity" styleClass="message-text" text="" wrapText="true" />
+        </VBox>
+    </bottom>
+    
+</BorderPane>

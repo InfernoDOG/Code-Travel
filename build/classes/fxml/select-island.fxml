@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.codetravel.ui.SelectIslandController"
+      styleClass="select-island-container" maxWidth="400" maxHeight="800" 
+      alignment="CENTER" spacing="20">
+    
+    <!-- Заголовок -->
+    <VBox spacing="15" alignment="CENTER">
+        <Label text="🏝️ ВЫБОР ОСТРОВА" styleClass="select-island-title" alignment="CENTER" maxWidth="Infinity" wrapText="true"/>
+        <Label text="Выберите остров для вашего приключения!" styleClass="select-island-subtitle" alignment="CENTER" maxWidth="Infinity" wrapText="true"/>
+    </VBox>
+    
+    <!-- Изображение острова -->
+    <ImageView fx:id="islandImage" fitWidth="350" fitHeight="150" 
+               preserveRatio="true" styleClass="island-preview"/>
+    
+    <!-- Описание -->
+    <VBox spacing="15" alignment="CENTER" styleClass="description-container">
+        <Text text="Выберите один из трёх доступных островов, каждый со своими уникальными мобами, вопросами и стилем:" 
+              styleClass="select-island-description" 
+              textAlignment="CENTER" wrappingWidth="350"/>
+        
+        <VBox spacing="10" alignment="CENTER" styleClass="islands-list">
+            <!-- Java остров -->
+            <Button fx:id="javaIslandButton" text="☕ JAVA ОСТРОВ" 
+                    prefWidth="300" prefHeight="50" 
+                    styleClass="island-button java-button" 
+                    onMouseClicked="#handleSelectJava"/>
+            
+            <!-- Python остров -->
+            <Button fx:id="pythonIslandButton" text="🐍 PYTHON ОСТРОВ" 
+                    prefWidth="300" prefHeight="50" 
+                    styleClass="island-button python-button" 
+                    onMouseClicked="#handleSelectPython"/>
+            
+            <!-- C# остров -->
+            <Button fx:id="csharpIslandButton" text="📋 C# ОСТРОВ" 
+                    prefWidth="300" prefHeight="50" 
+                    styleClass="island-button csharp-button" 
+                    onMouseClicked="#handleSelectCSharp"/>
+        </VBox>
+        
+        <Text text="Каждый остров предлагает уникальный опыт обучения программированию!" 
+              styleClass="select-island-motivation" 
+              textAlignment="CENTER" wrappingWidth="350"/>
+    </VBox>
+    
+    <!-- Кнопки действий -->
+    <VBox spacing="15" alignment="CENTER">
+        <Button fx:id="backButton" text="НАЗАД" 
+                prefWidth="250" prefHeight="40" 
+                styleClass="secondary-button" 
+                onMouseClicked="#handleBack"/>
+    </VBox>
+    
+</VBox>

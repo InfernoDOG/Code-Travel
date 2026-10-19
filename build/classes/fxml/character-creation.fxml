@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.codetravel.ui.CharacterCreationController"
+           styleClass="main-container" maxWidth="Infinity" maxHeight="Infinity">
+    
+    <!-- Центрированный контейнер для всех элементов -->
+    <VBox alignment="CENTER" spacing="20" maxWidth="400" maxHeight="Infinity" styleClass="content-container">
+        
+        <!-- Заголовок с зелёным свечением -->
+        <Label text="Создание персонажа" fx:id="titleLabel" styleClass="character-title" 
+               maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+        
+        <!-- Аватар класса -->
+        <ImageView fx:id="classImageView" fitWidth="200" fitHeight="200" 
+                   preserveRatio="true" styleClass="class-avatar"/>
+        
+        <!-- Имя персонажа -->
+        <VBox spacing="5" maxWidth="Infinity">
+            <Label text="Имя персонажа:" styleClass="sub-title"/>
+            <TextField fx:id="nameField" promptText="Введите имя героя..." 
+                      maxWidth="Infinity" prefHeight="40" styleClass="input-field"/>
+        </VBox>
+        
+        <!-- Класс персонажа -->
+        <VBox spacing="5" maxWidth="Infinity">
+            <Label text="Выберите класс:" styleClass="sub-title"/>
+            <ComboBox fx:id="classComboBox" maxWidth="Infinity" prefHeight="40" styleClass="combo-box"/>
+        </VBox>
+        
+        <!-- Описание класса в текстовом поле -->
+        <VBox spacing="5" maxWidth="Infinity">
+            <Label text="Описание класса:" styleClass="sub-title"/>
+            <TextArea fx:id="classDescriptionArea" text="Выберите класс для просмотра описания" 
+                      editable="false" wrapText="true" prefHeight="120" 
+                      styleClass="description-text" maxWidth="Infinity"/>
+        </VBox>
+        
+        <!-- Характеристики -->
+        <VBox spacing="10" maxWidth="Infinity" styleClass="stats-container">
+            <Label text="Характеристики:" styleClass="sub-title"/>
+            
+            <VBox spacing="8">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Сила:" prefWidth="80" styleClass="stat-label"/>
+                    <ProgressBar fx:id="strengthBar" prefWidth="200" prefHeight="15" styleClass="strength-bar"/>
+                    <Label fx:id="strengthValue" text="10" prefWidth="30" styleClass="stat-value"/>
+                </HBox>
+                
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Интеллект:" prefWidth="80" styleClass="stat-label"/>
+                    <ProgressBar fx:id="intelligenceBar" prefWidth="200" prefHeight="15" styleClass="intelligence-bar"/>
+                    <Label fx:id="intelligenceValue" text="10" prefWidth="30" styleClass="stat-value"/>
+                </HBox>
+                
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Ловкость:" prefWidth="80" styleClass="stat-label"/>
+                    <ProgressBar fx:id="agilityBar" prefWidth="200" prefHeight="15" styleClass="agility-bar"/>
+                    <Label fx:id="agilityValue" text="10" prefWidth="30" styleClass="stat-value"/>
+                </HBox>
+            </VBox>
+        </VBox>
+        
+        <!-- Кнопки управления в стиле боя -->
+        <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+            <Button text="Назад" fx:id="backButton" prefWidth="100" prefHeight="40" 
+                    onAction="#handleBack" styleClass="secondary-button"/>
+            <Button text="Создать" fx:id="createButton" prefWidth="120" prefHeight="40" 
+                    onAction="#handleCreateCharacter" styleClass="primary-button"/>
+        </HBox>
+        
+    </VBox>
+</StackPane>

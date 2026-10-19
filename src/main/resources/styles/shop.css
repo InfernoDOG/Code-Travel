@@ -1,0 +1,202 @@
+/* Стили для магазина в мобильном стиле игры */
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.main-container {
+    -fx-background-color: #1a1a2e;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* ===== ЗАГОЛОВОК МАГАЗИНА ===== */
+.header-section {
+    -fx-background-color: #0f3460;
+    -fx-border-color: #16213e;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-style: solid;
+    -fx-padding: 15px;
+}
+
+.title-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e94560;
+    -fx-background-color: transparent;
+}
+
+.subtitle-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+    -fx-background-color: transparent;
+}
+
+/* ===== КОНТЕНТ МАГАЗИНА ===== */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: #1a1a2e; /* ИСПРАВЛЕНО: убирает белую рамку вокруг контента */
+    -fx-border-color: transparent;
+    -fx-fit-to-width: true;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+    -fx-padding: 10px;
+}
+
+.content-container {
+    -fx-background-color: transparent;
+}
+
+/* ===== РАЗДЕЛЫ МАГАЗИНА ===== */
+.section-box {
+    -fx-background-color: rgba(15, 52, 96, 0.6); /* Чуть затемнили для контраста */
+    -fx-background-radius: 8px;
+    -fx-border-color: #16213e;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 14px;
+}
+
+.section-title {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff9f43; /* ИСПРАВЛЕНО: Яркий оранжевый/янтарный цвет для идеальной читаемости */
+    -fx-background-color: transparent;
+}
+
+/* ===== СЕТКА ТОВАРОВ ===== */
+.items-grid {
+    -fx-alignment: center-left;
+    -fx-hgap: 12px;
+    -fx-vgap: 12px;
+}
+
+.item-info {
+    -fx-alignment: center-left;
+    -fx-fill-width: true;
+}
+
+/* ===== ИКОНКИ ПРЕДМЕТОВ ===== */
+.item-icon {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: transparent;
+    -fx-min-width: 30px; /* ДОБАВИТЬ: чтобы иконка не превращалась в ... */
+}
+
+/* ===== НАЗВАНИЯ ПРЕДМЕТОВ ===== */
+.item-name {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: transparent;
+    -fx-wrap-text: true;
+    /* ИСПРАВЛЕНО: Ограничиваем базовую ширину текста, чтобы он не выталкивал цену */
+    -fx-pref-width: 140px; 
+}
+
+/* ===== ЦЕНЫ ПРЕДМЕТОВ ===== */
+.item-price {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+    -fx-background-color: transparent;
+    /* ИСПРАВЛЕНО: Жестко бронируем место под цену и иконку монеты, чтобы они не исчезали */
+    -fx-min-width: 65px;
+    -fx-pref-width: 65px;
+    -fx-alignment: center-left;
+}
+
+/* ===== КНОПКИ ПОКУПКИ ===== */
+.primary-button-small {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-color: #87431d; 
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 0px; /* Убрали боковые паддинги, так как ширина теперь фиксированная */
+    -fx-cursor: hand;
+    -fx-alignment: center; /* Центрируем текст внутри кнопки */
+    
+    /* ИСПРАВЛЕНО: Задаем четкий фиксированный размер. 
+       95 пикселей идеально вместят слово "Купить" или цену без обрезания */
+    -fx-pref-width: 95px;
+    -fx-min-width: 95px;
+}
+
+/* ===== ОПИСАНИЯ ПРЕДМЕТОВ ===== */
+.item-desc {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-background-color: transparent;
+    -fx-wrap-text: true;
+    /* ИСПРАВЛЕНО: Синхронизируем ширину с названием для ровной сетки */
+    -fx-pref-width: 140px;
+}
+
+.primary-button-small:hover {
+    -fx-background-color: #a75328;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.3), 6, 0, 0, 0);
+}
+
+.primary-button-small:pressed {
+    -fx-background-color: #643114;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.primary-button-small:disabled {
+    -fx-background-color: #4a4a4a;
+    -fx-border-color: #7f8c8d;
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* ===== НИЖНЯЯ ПАНЕЛЬ ===== */
+.footer-section {
+    -fx-background-color: #0f3460;
+    -fx-border-color: #16213e;
+    -fx-border-width: 2px 0 0 0;
+    -fx-border-style: solid;
+    -fx-padding: 12px;
+}
+
+/* ===== СООБЩЕНИЯ ===== */
+.message-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ecc71;
+    -fx-background-color: transparent;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+.message-text.error { -fx-text-fill: #e74c3c; }
+.message-text.success { -fx-text-fill: #2ecc71; }
+.message-text.warning { -fx-text-fill: #f39c12; }
+
+/* ===== СКРОЛЛБАР ===== */
+.content-scroll .scroll-bar:vertical,
+.content-scroll .scroll-bar:vertical .track,
+.content-scroll .scroll-bar:vertical .thumb {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+    -fx-min-width: 0;
+}
+
+.content-scroll .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+    -fx-min-height: 0;
+}

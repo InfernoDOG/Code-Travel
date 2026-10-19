@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.codetravel.ui.SaveDialogController"
+      styleClass="main-container" prefWidth="520" maxWidth="Infinity" maxHeight="Infinity" 
+      alignment="CENTER" spacing="20">
+    
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+     
+    <Label text="ВЫБЕРИТЕ СЛОТ ДЛЯ СОХРАНЕНИЯ" styleClass="title-text" alignment="CENTER"/>
+     
+    <VBox styleClass="slot-container" spacing="8" alignment="CENTER">
+        <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+            <Label text="СЛОТ 1" styleClass="slot-number" alignment="CENTER" minWidth="-Infinity"/>
+            
+            <VBox spacing="3" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" minWidth="0">
+                <Label fx:id="slot1InfoLabel" text="[ПУСТО]" styleClass="slot-info" 
+                       alignment="CENTER_LEFT" wrapText="true" maxWidth="240"/>
+            </VBox>
+            
+            <Button fx:id="slot1Button" text="СОХРАНИТЬ" prefHeight="35" 
+                    minWidth="-Infinity" styleClass="primary-button" onAction="#handleSaveSlot1"/>
+        </HBox>
+    </VBox>
+         
+    <VBox styleClass="slot-container" spacing="8" alignment="CENTER">
+        <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+            <Label text="СЛОТ 2" styleClass="slot-number" alignment="CENTER" minWidth="-Infinity"/>
+            
+            <VBox spacing="3" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" minWidth="0">
+                <Label fx:id="slot2InfoLabel" text="[ПУСТО]" styleClass="slot-info" 
+                       alignment="CENTER_LEFT" wrapText="true" maxWidth="240"/>
+            </VBox>
+            
+            <Button fx:id="slot2Button" text="СОХРАНИТЬ" prefHeight="35" 
+                    minWidth="-Infinity" styleClass="primary-button" onAction="#handleSaveSlot2"/>
+        </HBox>
+    </VBox>
+
+    <VBox styleClass="slot-container" spacing="8" alignment="CENTER">
+        <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+            <Label text="СЛОТ 3" styleClass="slot-number" alignment="CENTER" minWidth="-Infinity"/>
+            
+            <VBox spacing="3" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" minWidth="0">
+                <Label fx:id="slot3InfoLabel" text="[ПУСТО]" styleClass="slot-info" 
+                       alignment="CENTER_LEFT" wrapText="true" maxWidth="240"/>
+            </VBox>
+            
+            <Button fx:id="slot3Button" text="СОХРАНИТЬ" prefHeight="35" 
+                    minWidth="-Infinity" styleClass="primary-button" onAction="#handleSaveSlot3"/>
+        </HBox>
+    </VBox>
+     
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="ОТМЕНА" prefWidth="140" prefHeight="38" 
+                styleClass="secondary-button" onAction="#handleCancel"/>
+    </HBox>
+     
+</VBox>

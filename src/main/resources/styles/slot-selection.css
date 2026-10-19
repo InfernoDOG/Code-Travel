@@ -1,0 +1,183 @@
+/* =========================================================================
+   Стили для экрана выбора слотов персонажей (Code Travel) - PREMIUM RETRO
+   ========================================================================= */
+
+/* ===== ГЛАВНЫЙ ЗАГОЛОВОК (CODE TRAVEL) ===== */
+.game-title {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db; /* Глубокий неоновый синий */
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.7), 12, 0.5, 0, 0);
+}
+
+/* ===== ПОДЗАГОЛОВОК (ВЫБЕРИТЕ ПЕРСОНАЖА) ===== */
+.subtitle-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff66; /* Неоновый зеленый */
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.6), 8, 0.5, 0, 0);
+}
+
+/* ===== КОНТЕЙНЕРЫ СЛОТОВ (КАРТОЧКИ) ===== */
+.slot-container {
+    -fx-background-color: rgba(26, 26, 46, 0.85); /* Полупрозрачный темный фон */
+    -fx-background-radius: 10px;
+    -fx-border-color: rgba(52, 152, 219, 0.5); /* Аккуратная синяя рамка */
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.4, 0, 4);
+}
+
+/* Фоверенная (активная) карточка при наведении или выборе */
+.slot-container:hover {
+    -fx-border-color: #00ff66; /* Подсвечивается зеленым при наведении */
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.3), 12, 0.4, 0, 0);
+}
+
+/* ===== ТЕКСТ ВНУТРИ СЛОТОВ ===== */
+.slot-name {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.slot-class {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+    -fx-text-fill: #f39c12; /* Фирменный оранжевый для класса */
+}
+
+.slot-level {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #3498db;
+}
+
+/* ===== КНОПКА "НАЗАД" (ВНИЗУ ЭКРАНА) ===== */
+.secondary-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a3bfa8;
+    /* Кибер-сланцевый стиль, как у кнопки побега */
+    -fx-background-color: linear-gradient(to bottom, #1c2833, #11171d);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(52, 152, 219, 0.4);
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 25px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #1c2833);
+    -fx-border-color: #3498db;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 8, 0.3, 0, 0);
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #11171d;
+    -fx-border-color: #1c2833;
+}
+/* ===== ОБЩИЙ КОНТЕЙНЕР ДИАЛОГА СТАТУСА ===== */
+.main-container {
+    -fx-background-color: #0f111a; /* Глубокий космический темный фон */
+    -fx-border-color: #3498db;     /* Элегантная неоновая рамка вокруг всего диалога */
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+/* ===== ЗАГОЛОВК ОКНА СОХРАНЕНИЯ ===== */
+.title-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db; /* Насыщенный синий неон вместо тусклого цвета */
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.7), 10, 0.4, 0, 0);
+}
+
+/* ===== КОНТЕЙНЕРЫ СЛОТОВ (КАРТОЧКИ) ===== */
+.slot-container {
+    -fx-background-color: rgba(26, 26, 46, 0.85);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(52, 152, 219, 0.4);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px 16px;
+}
+
+/* Эффект интерактивности при наведении на слот */
+.slot-container:hover {
+    -fx-border-color: #00ff66; /* Зеленое свечение при наведении */
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.25), 8, 0.4, 0, 0);
+}
+
+/* ===== ТЕКСТ СЛОТОВ ===== */
+.slot-number {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff66; /* Яркий хакерский зеленый */
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.4), 4, 0.3, 0, 0);
+}
+
+.slot-info {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff; /* Чистый белый, чтобы легко читался класс и уровень */
+}
+
+/* ===== КНОПКА: СОХРАНИТЬ / ПЕРЕЗАПИСАТЬ ===== */
+.primary-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    /* Огненно-оранжевый игровой градиент */
+    -fx-background-color: linear-gradient(to bottom, #d35400, #a04000);
+    -fx-background-radius: 6px;
+    -fx-border-color: #f39c12;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 6px;
+    -fx-padding: 6px 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(243, 156, 18, 0.2), 4, 0.3, 0, 0);
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #e67e22, #d35400);
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(243, 156, 18, 0.5), 6, 0.4, 0, 0);
+}
+
+.primary-button:pressed {
+    -fx-background-color: #a04000;
+}
+
+/* ===== КНОПКА: ОТМЕНА ===== */
+.secondary-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a3bfa8;
+    /* Сдержанный стальной фон */
+    -fx-background-color: linear-gradient(to bottom, #1c2833, #11171d);
+    -fx-background-radius: 6px;
+    -fx-border-color: rgba(52, 152, 219, 0.4);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #1c2833);
+    -fx-border-color: #3498db;
+    -fx-text-fill: #ffffff;
+}

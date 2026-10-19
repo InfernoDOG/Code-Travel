@@ -1,0 +1,850 @@
+/* Общая тёмная тема для всего приложения Code-Travel */
+
+/* ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ===== */
+.root {
+    -fx-primary: #1a1a2e;
+    -fx-secondary: #34495e;
+    -fx-accent: #3498db;
+    -fx-danger: #e74c3c;
+    -fx-warning: #f39c12;
+    -fx-success: #27ae60;
+    -fx-info: #95a5a6;
+    -fx-light: #ecf0f1;
+    -fx-dark: #2c3e50;
+    -fx-text-primary: #ecf0f1;
+    -fx-text-secondary: #95a5a6;
+    -fx-text-muted: #7f8c8d;
+}
+
+/* ===== ОБЩИЕ СТИЛИ ===== */
+.main-container {
+    background-color: #1a1a2e;
+    -fx-background-color: #1a1a2e;
+    padding: 20px;
+    -fx-padding: 20px;
+}
+
+/* ===== BORDERPANE СТРУКТУРА ===== */
+.retro-main-container {
+    background-color: #1a1a2e;
+    -fx-background-color: #1a1a2e;
+}
+
+.header-section {
+    background-color: rgba(26, 26, 46, 0.9);
+    -fx-background-color: rgba(26, 26, 46, 0.9);
+    -fx-background-radius: 8px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px;
+}
+
+.footer-section {
+    background-color: rgba(26, 26, 46, 0.9);
+    -fx-background-color: rgba(26, 26, 46, 0.9);
+    -fx-background-radius: 8px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px;
+}
+
+.content-container {
+    background-color: rgba(44, 62, 80, 0.8);
+    -fx-background-color: rgba(44, 62, 80, 0.8);
+    -fx-background-radius: 8px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+}
+
+.section-box {
+    background-color: rgba(52, 73, 94, 0.6);
+    -fx-background-color: rgba(52, 73, 94, 0.6);
+    -fx-background-radius: 6px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+}
+
+/* ===== ТЕКСТ С ТЕМНОЙ ПОДЛОЖКОЙ ===== */
+.title-text {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Consolas', monospace;
+}
+
+.subtitle-text {
+    -fx-font-size: 18px;
+    -fx-text-fill: #3498db;
+    -fx-font-family: 'Consolas', monospace;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f39c12;
+    -fx-font-family: 'Consolas', monospace;
+}
+
+.item-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-family: 'Consolas', monospace;
+}
+
+.item-desc {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-family: 'Consolas', monospace;
+    -fx-wrap-text: true;
+}
+
+.item-price {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f39c12;
+    -fx-font-family: 'Consolas', monospace;
+}
+
+.message-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e74c3c;
+    -fx-font-family: 'Consolas', monospace;
+    -fx-wrap-text: true;
+}
+
+.small-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-family: 'Consolas', monospace;
+}
+
+/* ===== СТИЛИ ДЛЯ ГЛАВНОГО МЕНЮ - НОВАЯ СТРУКТУРА СЛОЕВ ===== */
+.main-menu-container {
+    -fx-background-color: transparent;
+    -fx-background-image: url('/texture/main-menu/fon.jpg'), 
+                        url('/texture/main-menu/framework.png');
+    -fx-background-size: cover, cover;
+    -fx-background-position: center center, center center;
+    -fx-background-repeat: no-repeat, no-repeat;
+    -fx-padding: 0px;
+}
+
+.background-image {
+    -fx-smooth: true;
+    -fx-cache: true;
+}
+
+.menu-frame {
+    -fx-smooth: true;
+    -fx-cache: true;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 20, 0.5, 0, 0);
+}
+
+.main-logo {
+    -fx-smooth: true;
+    -fx-cache: true;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 15, 0.5, 0, 0);
+}
+
+/* ЕДИНЫЙ СТИЛЬ ДЛЯ ВСЕХ КНОПОК - КОРИЧНЕВЫЙ ГРАДИЕНТ С ЗОЛОТОЙ РАМКОЙ */
+.menu-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321);
+    -fx-background-radius: 8px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 8px;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.5, 0, 0);
+    -fx-padding: 12px 24px;
+}
+
+.menu-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0522D, #8B4513);
+    -fx-border-color: #FFA500;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1.0), 12, 0.5, 0, 0);
+}
+
+/* ГЛОБАЛЬНЫЕ СТИЛИ ДЛЯ ВСЕХ КНОПОК - ПЕРЕОПРЕДЕЛЕНИЕ СТАНДАРТНЫХ JAVAFX */
+.button {
+    -fx-font-size: 16px !important;
+    -fx-font-weight: bold !important;
+    -fx-font-family: 'Courier New', monospace !important;
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321) !important;
+    -fx-background-radius: 8px !important;
+    -fx-border-color: #FFD700 !important;
+    -fx-border-width: 3px !important;
+    -fx-border-radius: 8px !important;
+    -fx-text-fill: #FFFFFF !important;
+    -fx-cursor: hand !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.5, 0, 0) !important;
+    -fx-padding: 12px 24px !important;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0522D, #8B4513) !important;
+    -fx-border-color: #FFA500 !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1.0), 12, 0.5, 0, 0) !important;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.95 !important;
+    -fx-scale-y: 0.95 !important;
+}
+
+.button:disabled {
+    -fx-background-color: #666666 !important;
+    -fx-border-color: #555555 !important;
+    -fx-text-fill: #AAAAAA !important;
+    -fx-opacity: 0.6 !important;
+}
+
+.version-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 5, 0.5, 0, 0);
+}
+
+/* ===== СТИЛИ ДЛЯ ГЛАВНОГО МЕНЮ С ОРИГИНАЛЬНЫМИ ТЕКСТУРАМИ ===== */
+.main-menu-container {
+    -fx-background-color: #000000;
+}
+
+.background-image {
+    -fx-smooth: true;
+    -fx-cache: true;
+}
+
+.main-logo {
+    -fx-smooth: true;
+    -fx-cache: true;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0.5, 0, 0);
+}
+
+.menu-frame {
+    -fx-smooth: true;
+    -fx-cache: true;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 15, 0.5, 0, 0);
+}
+
+.menu-primary-button {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-background-color: #4A90E2;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #357ABD;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(74, 144, 226, 0.3), 10, 0, 0, 0);
+    -fx-padding: 12px 20px;
+}
+
+.menu-primary-button:hover {
+    -fx-background-color: #357ABD;
+    -fx-effect: dropshadow(gaussian, rgba(74, 144, 226, 0.5), 15, 0, 0, 0);
+}
+
+.menu-secondary-button {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-background-color: #F5A623;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #D68910;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(245, 166, 35, 0.3), 10, 0, 0, 0);
+    -fx-padding: 12px 20px;
+}
+
+.menu-secondary-button:hover {
+    -fx-background-color: #D68910;
+    -fx-effect: dropshadow(gaussian, rgba(245, 166, 35, 0.5), 15, 0, 0, 0);
+}
+
+.menu-danger-button {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #C0392B;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.3), 10, 0, 0, 0);
+    -fx-padding: 12px 20px;
+}
+
+.menu-danger-button:hover {
+    -fx-background-color: #C0392B;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.5), 15, 0, 0, 0);
+}
+
+.version-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 5, 0.5, 0, 0);
+}
+
+/* ===== СТИЛИ ДЛЯ ГЛАВНОГО МЕНЮ ===== */
+.decorative-icon {
+    -fx-font-size: 28px;
+    -fx-text-fill: #f39c12;
+    -fx-effect: dropshadow(gaussian, #f39c12, 8, 0.5, 0, 0);
+}
+
+.menu-background {
+    background-color: rgba(44, 62, 80, 0.3);
+    -fx-background-color: rgba(44, 62, 80, 0.3);
+    -fx-background-radius: 15px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0.5, 0, 0);
+}
+
+.button-icon {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ecf0f1;
+    -fx-alignment: center;
+}
+
+.separator-line {
+    -fx-background-color: #34495e;
+    -fx-pref-height: 2px;
+    -fx-max-height: 2px;
+}
+
+.separator-icon {
+    -fx-font-size: 16px;
+    -fx-text-fill: #95a5a6;
+}
+
+.footer-icon {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.footer-separator {
+    -fx-background-color: #2c3e50;
+    -fx-pref-height: 1px;
+    -fx-max-height: 1px;
+}
+
+/* ===== УЛУЧШЕННЫЕ СТИЛИ КНОПОК ===== */
+.primary-button {
+    background-color: #27ae60;
+    -fx-background-color: #27ae60;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-color: #229954;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(39, 174, 96, 0.3), 10, 0.5, 0, 0);
+}
+
+.primary-button:hover {
+    background-color: #229954;
+    -fx-background-color: #229954;
+    -fx-effect: dropshadow(gaussian, rgba(39, 174, 96, 0.5), 15, 0.5, 0, 0);
+}
+
+.secondary-button {
+    background-color: #3498db;
+    -fx-background-color: #3498db;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 10, 0.5, 0, 0);
+}
+
+.secondary-button:hover {
+    background-color: #2980b9;
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.5), 15, 0.5, 0, 0);
+}
+
+.danger-button {
+    background-color: #e74c3c;
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-color: #c0392b;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.3), 10, 0.5, 0, 0);
+}
+
+.danger-button:hover {
+    background-color: #c0392b;
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.5), 15, 0.5, 0, 0);
+}
+
+/* ===== СТИЛИ ДЛЯ СОЗДАНИЯ ПЕРСОНАЖА ===== */
+.input-field {
+    background-color: #2d3748;
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-border-color: #34495e;
+    border-color: #34495e;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-background-radius: 6px;
+    border-radius: 6px;
+    -fx-padding: 8px;
+    padding: 8px;
+}
+
+.combo-box {
+    background-color: #2d3748;
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-border-color: #34495e;
+    border-color: #34495e;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-background-radius: 6px;
+    border-radius: 6px;
+    -fx-padding: 8px;
+    padding: 8px;
+}
+
+.description-text {
+    -fx-text-fill: #cccccc;
+    color: #cccccc;
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+}
+
+.stat-label {
+    -fx-text-fill: #ecf0f1;
+    color: #ecf0f1;
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.stat-value {
+    -fx-text-fill: #ffffff;
+    color: #ffffff;
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.stat-bar {
+    -fx-accent: #3498db;
+    -fx-background-radius: 5px;
+}
+
+.stats-container {
+    background-color: rgba(0, 255, 0, 0.1);
+    -fx-background-color: rgba(0, 255, 0, 0.1);
+    -fx-background-radius: 8px;
+    border-radius: 8px;
+    -fx-padding: 15px;
+    padding: 15px;
+}
+
+.tutorial-container {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    padding: 20px;
+    -fx-padding: 20px;
+    border-color: #3498db;
+    -fx-border-color: #3498db;
+    border-width: 1px;
+    -fx-border-width: 1px;
+    border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.content-container {
+    background-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    padding: 15px;
+    -fx-padding: 15px;
+    border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.title-text {
+    font-size: 16px;
+    -fx-font-size: 16px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    color: #2E86AB;
+    -fx-text-fill: #2E86AB;
+    text-align: center;
+    -fx-text-alignment: center;
+}
+
+.subtitle-text {
+    font-size: 14px;
+    -fx-font-size: 14px;
+    color: #b0b0b0;
+    -fx-text-fill: #b0b0b0;
+    text-align: center;
+    -fx-text-alignment: center;
+}
+
+.body-text {
+    font-size: 14px;
+    -fx-font-size: 14px;
+    color: -fx-text-primary;
+    -fx-text-fill: -fx-text-primary;
+}
+
+.challenge-text {
+    font-size: 14px;
+    -fx-font-size: 14px;
+    color: #f39c12;
+    -fx-text-fill: #f39c12;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    word-wrap: break-word;
+    -fx-wrap-text: true;
+}
+
+.challenge-card {
+    background-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    padding: 15px;
+    -fx-padding: 15px;
+    border-radius: 10px;
+    -fx-background-radius: 10px;
+    border-color: -fx-accent;
+    -fx-border-color: -fx-accent;
+    border-width: 1px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    min-width: 200px;
+    -fx-min-width: 200px;
+    max-width: 100%;
+    -fx-max-width: Infinity;
+}
+
+.small-text {
+    font-size: 12px;
+    -fx-font-size: 12px;
+    color: -fx-text-muted;
+    -fx-text-fill: -fx-text-muted;
+}
+
+/* ===== КНОПКИ ===== */
+.primary-button {
+    background-color: -fx-accent;
+    -fx-background-color: -fx-accent;
+    color: white;
+    -fx-text-fill: white;
+    font-size: 14px;
+    -fx-font-size: 14px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    border-radius: 8px;
+    -fx-background-radius: 8px;
+    height: 40px;
+    -fx-pref-height: 40px;
+}
+
+.primary-button:hover {
+    background-color: #2980b9;
+    -fx-background-color: #2980b9;
+}
+
+.secondary-button {
+    background-color: -fx-info;
+    -fx-background-color: -fx-info;
+    color: white;
+    -fx-text-fill: white;
+    font-size: 14px;
+    -fx-font-size: 14px;
+    font-weight: 900;
+    -fx-font-weight: 900;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    border-radius: 8px;
+    -fx-background-radius: 8px;
+    height: 40px;
+    -fx-pref-height: 40px;
+}
+
+.secondary-button:hover {
+    background-color: #7f8c8d;
+    -fx-background-color: #7f8c8d;
+}
+
+.success-button {
+    background-color: -fx-success;
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #2E8B57);
+    color: white;
+    -fx-text-fill: white;
+    font-size: 16px;
+    -fx-font-size: 16px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Consolas', monospace;
+    font-family: 'Consolas', monospace;
+    border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #34D399;
+    border-color: #34D399;
+    -fx-border-width: 2px;
+    border-width: 2px;
+    -fx-padding: 10px 20px;
+    padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(52, 211, 153, 0.7), 10, 0, 0, 0);
+    height: 40px;
+    -fx-pref-height: 40px;
+}
+
+.success-button:hover {
+    background-color: #229954;
+    -fx-background-color: #229954;
+}
+
+.danger-button {
+    background-color: -fx-danger;
+    -fx-background-color: -fx-danger;
+    color: white;
+    -fx-text-fill: white;
+    font-size: 14px;
+    -fx-font-size: 14px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    border-radius: 8px;
+    -fx-background-radius: 8px;
+    height: 40px;
+    -fx-pref-height: 40px;
+}
+
+.danger-button:hover {
+    background-color: #c0392b;
+    -fx-background-color: #c0392b;
+}
+
+.warning-button {
+    background-color: -fx-warning;
+    -fx-background-color: -fx-warning;
+    color: white;
+    -fx-text-fill: white;
+    font-size: 14px;
+    -fx-font-size: 14px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    border-radius: 8px;
+    -fx-background-radius: 8px;
+    height: 40px;
+    -fx-pref-height: 40px;
+}
+
+.warning-button:hover {
+    background-color: #e67e22;
+    -fx-background-color: #e67e22;
+}
+
+/* ===== ПОЛЯ ВВОДА ===== */
+.input-field {
+    background-color: -fx-dark;
+    -fx-background-color: -fx-dark;
+    color: -fx-text-primary;
+    -fx-text-fill: -fx-text-primary;
+    font-family: 'Consolas', monospace;
+    -fx-font-family: 'Consolas', monospace;
+    font-size: 12px;
+    -fx-font-size: 12px;
+    border-radius: 5px;
+    -fx-background-radius: 5px;
+    border-color: -fx-secondary;
+    -fx-border-color: -fx-secondary;
+    border-width: 1px;
+    -fx-border-width: 1px;
+    height: 60px;
+    -fx-pref-height: 60px;
+    word-wrap: break-word;
+    -fx-wrap-text: true;
+}
+
+.input-field:focused {
+    border-color: -fx-accent;
+    -fx-border-color: -fx-accent;
+    border-width: 2px;
+    -fx-border-width: 2px;
+}
+
+/* ===== ТЕКСТОВЫЕ ОБЛАСТИ ===== */
+.text-area {
+    background-color: #1a1a2e;
+    -fx-background-color: #1a1a2e;
+    color: #FFFFFF;
+    -fx-text-fill: #FFFFFF;
+    font-family: 'Consolas', monospace;
+    -fx-font-family: 'Consolas', monospace;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+    -fx-wrap-text: true;
+    -fx-prompt-text-fill: #666666;
+}
+
+/* ===== ПРОГРЕСС-БАРЫ ===== */
+.progress-bar {
+    accent-color: -fx-accent;
+    -fx-accent: -fx-accent;
+}
+
+.progress-bar .track {
+    background-color: -fx-dark;
+    -fx-control-inner-background: -fx-dark;
+}
+
+/* ===== РАЗДЕЛИТЕЛИ ===== */
+.separator {
+    background-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+}
+
+/* ===== СПИСКИ ===== */
+.list-container {
+    background-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    padding: 15px;
+    -fx-padding: 15px;
+    border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.list-view {
+    background-color: -fx-dark;
+    -fx-background-color: -fx-dark;
+    border-color: -fx-secondary;
+    -fx-border-color: -fx-secondary;
+    border-width: 1px;
+    -fx-border-width: 1px;
+}
+
+.list-cell {
+    background-color: -fx-dark;
+    -fx-background-color: -fx-dark;
+    color: -fx-text-primary;
+    -fx-text-fill: -fx-text-primary;
+    font-size: 14px;
+    -fx-font-size: 14px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.list-cell:selected {
+    background-color: -fx-accent;
+    -fx-background-color: -fx-accent;
+}
+
+/* ===== КАРТОЧКИ ===== */
+.card {
+    background-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    padding: 15px;
+    -fx-padding: 15px;
+    border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+/* ===== СПЕЦИАЛЬНЫЕ ЭФФЕКТЫ ===== */
+.glow {
+    -fx-effect: dropshadow(gaussian, -fx-accent, 10, 0.5, 0, 0);
+}
+
+.pulse {
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* ===== ТЕМЫ И ПЕРЕКЛЮЧЕНИЕ ===== */
+.dark-theme {
+    background-color: -fx-primary;
+    -fx-background-color: -fx-primary;
+    color: -fx-text-primary;
+    -fx-text-fill: -fx-text-primary;
+}
+
+.light-theme {
+    background-color: -fx-light;
+    -fx-background-color: -fx-light;
+    color: -fx-dark;
+    -fx-text-fill: -fx-dark;
+}
+
+/* Базовый сброс дефолтных серых рамок скролл-панели */
+.custom-scroll {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.custom-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Стилизация дорожки горизонтального скролла */
+.custom-scroll .scroll-bar:horizontal {
+    -fx-background-color: #243447; 
+    -fx-background-radius: 5px;
+    -fx-pref-height: 10px; /* Фиксируем высоту, чтобы не пропадал */
+}
+
+/* Ползунок (золотой игровой акцент) */
+.custom-scroll .scroll-bar:horizontal .thumb {
+    -fx-background-color: #cfa115;
+    -fx-background-radius: 5px;
+}
+
+.custom-scroll .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #e5b822; /* Подсветка при наведении */
+}
+
+/* Полностью вырезаем ненужные стрелочки по бокам */
+.custom-scroll .scroll-bar:horizontal .increment-button,
+.custom-scroll .scroll-bar:horizontal .decrement-button,
+.custom-scroll .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.custom-scroll .scroll-bar:horizontal .increment-arrow,
+.custom-scroll .scroll-bar:horizontal .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}

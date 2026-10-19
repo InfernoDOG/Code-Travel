@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.codetravel.ui.GameSceneController"
+           styleClass="main-container" maxWidth="Infinity" maxHeight="Infinity">
+    
+    <!-- Основной контейнер с вертикальным расположением -->
+    <VBox spacing="10" maxWidth="Infinity" maxHeight="Infinity" alignment="TOP_CENTER">
+        
+        <!-- Компактный блок персонажа в самом верху -->
+        <VBox styleClass="character-panel" spacing="3" maxWidth="Infinity" alignment="CENTER">
+            <!-- Основная информация с балансировкой -->
+            <HBox spacing="15" alignment="CENTER">
+                <!-- Аватар без уровня -->
+                <VBox spacing="2" alignment="CENTER">
+                    <StackPane prefWidth="50" prefHeight="50" styleClass="avatar-container">
+                        <ImageView fx:id="playerAvatarImageView" fitWidth="50" fitHeight="50" 
+                                   preserveRatio="true" styleClass="player-avatar"/>
+                    </StackPane>
+                    <!-- Логотип класса над именем -->
+                    <ImageView fx:id="classLogoImageView" fitWidth="30" fitHeight="30" 
+                               preserveRatio="true" styleClass="class-logo"/>
+                    <Label fx:id="playerNameLabel" text="Герой" styleClass="character-name" alignment="CENTER"/>
+                    <Label fx:id="playerClassLabel" text="Воин кода" styleClass="character-class" alignment="CENTER"/>
+                </VBox>
+                
+                <!-- Статус-бары с уровнем -->
+                <VBox spacing="5" alignment="CENTER">
+                    <!-- Здоровье с цветной иконкой и центрированием -->
+                    <VBox spacing="5" alignment="CENTER" style="-fx-padding: 10 20 10 20;">
+                        <Label text="❤" styleClass="status-icon-hp" alignment="CENTER"/>
+                        <ProgressBar fx:id="playerHealthBar" prefWidth="160" prefHeight="12" styleClass="health-bar-compact"/>
+                        <Label fx:id="playerHpLabel" text="100/100" styleClass="hp-text-centered" alignment="CENTER"/>
+                    </VBox>
+                    
+                    <!-- Опыт с уровнем слева и центрированием -->
+                    <VBox spacing="5" alignment="CENTER" style="-fx-padding: 10 20 10 20;">
+                        <!-- Уровень слева -->
+                        <HBox spacing="2" alignment="CENTER">
+                            <Label fx:id="playerLevelLabel" text="1" styleClass="level-badge-small" alignment="CENTER"/>
+                            <Label text="LVL" styleClass="level-text-small" alignment="CENTER"/>
+                        </HBox>
+                        <!-- Полоска опыта -->
+                        <ProgressBar fx:id="experienceBar" prefWidth="160" prefHeight="12" styleClass="exp-bar-compact"/>
+                        <Label fx:id="experienceLabel" text="0/100" styleClass="exp-text-centered" alignment="CENTER"/>
+                    </VBox>
+                </VBox>
+            </HBox>
+        </VBox>
+        
+        <!-- Кнопка магазина -->
+        <HBox alignment="CENTER" maxWidth="Infinity" style="-fx-padding: 5 0 10 0;">
+            <Button fx:id="shopButton" text="🛒 МАГАЗИН" styleClass="shop-button"/>
+        </HBox>
+        
+        <!-- Центральная панель с информацией об острове и мобах -->
+        <VBox styleClass="content-container" spacing="10" maxWidth="Infinity" alignment="CENTER">
+            <!-- Информация об острове -->
+            <VBox spacing="5" alignment="CENTER">
+                <Label fx:id="islandNameLabel" text="Остров Переменных" styleClass="title-text" alignment="CENTER" maxWidth="Infinity" wrapText="true"/>
+                <Label fx:id="islandDescriptionLabel" text="Место, где рождаются данные." styleClass="body-text" alignment="CENTER" maxWidth="Infinity" wrapText="true"/>
+            </VBox>
+            
+            <Separator/>
+            
+            <!-- Панель мобов -->
+            <VBox spacing="5" maxWidth="Infinity" alignment="CENTER">
+                <Label text="ОБИТАТЕЛИ ОСТРОВА" styleClass="title-text" alignment="CENTER" maxWidth="Infinity" wrapText="true"/>
+                <ScrollPane fx:id="mobScrollPane" fitToWidth="false" fitToHeight="true" vbarPolicy="NEVER" hbarPolicy="AS_NEEDED">
+                    <GridPane fx:id="mobGrid" hgap="15" vgap="15" alignment="CENTER"/>
+                </ScrollPane>
+            </VBox>
+        </VBox>
+        
+        <!-- Нижняя панель управления -->
+        <VBox spacing="5" alignment="BOTTOM_LEFT" maxWidth="Infinity">
+            <Separator/>
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="СОХРАНИТЬ ИГРУ" prefWidth="200" prefHeight="40" 
+                        onAction="#handleSaveGame" styleClass="success-button"/>
+                <Button text="ГЛАВНОЕ МЕНЮ" prefWidth="200" prefHeight="40" 
+                        onAction="#handleBackToMenu" styleClass="secondary-button"/>
+            </HBox>
+        </VBox>
+        
+    </VBox>
+    
+</StackPane>

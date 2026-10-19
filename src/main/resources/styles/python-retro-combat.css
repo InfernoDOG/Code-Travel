@@ -1,0 +1,250 @@
+/* =========================================================================
+   Ретро-RPG стили для боевой сцены Python острова - MATRIX GREEN PREMIUM
+   ========================================================================= */
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.retro-main-container {
+    -fx-background-color: #050a07; /* Глубокий ультра-темный зеленый */
+    -fx-background-image: url('/texture/combat/combat-bg.png');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* ===== БОЕВАЯ СЦЕНА (ОКНО С МОБОМ И ПЕРСОНАЖЕМ) ===== */
+.battle-canvas {
+    -fx-background-color: rgba(5, 10, 7, 0.6); /* Полупрозрачный темный фильтр */
+    -fx-border-color: #00ff66;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.5), 12, 0.4, 0, 0);
+}
+
+/* ===== НИЖНЯЯ ПАНЕЛЬ ИНТЕРФЕЙСА УПРАВЛЕНИЯ ===== */
+.ui-panel {
+    -fx-background-color: rgba(8, 15, 11, 0.94); /* Плотный темный фон с зеленым отливом */
+    -fx-background-radius: 12px;
+    -fx-border-color: #00ff66;
+    -fx-border-width: 3px;
+    -fx-border-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.5), 15, 0.5, 0, 0);
+    -fx-padding: 20px;
+}
+
+/* ===== ТЕКСТОВЫЕ ЭЛЕМЕНТЫ (ЧИТАЕМОСТЬ НА 100%) ===== */
+
+/* Заголовок хода */
+.message-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-fill: #00ff66;
+    -fx-text-fill: #00ff66; /* Дублирование для фикса Label/Text */
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.6), 6, 0.4, 0, 0);
+    -fx-alignment: CENTER;
+    -fx-wrap-text: true;
+}
+
+/* Окно самого вопроса / задания */
+.task-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-fill: #ffffff;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #020503; /* Абсолютно черный с зеленцой фон для контраста текста */
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(0, 255, 102, 0.6);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px;
+}
+
+/* Текстовое поле ввода ответа (убираем дефолтный белый вырвиглазный фон) */
+.text-field {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-background-color: #020503;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00ff66;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px;
+}
+.text-field:focused {
+    -fx-border-color: #00e5ff; /* Бирюзовый фокус для хакерской атмосферы */
+    -fx-effect: dropshadow(gaussian, rgba(0, 229, 255, 0.5), 8, 0.4, 0, 0);
+}
+
+/* ===== КНОПКИ ДЕЙСТВИЙ (НЕОНОВЫЕ МАТРИЧНЫЕ ГРАДИЕНТЫ) ===== */
+
+/* Базовая зеленая кнопка (Подсказка) */
+.action-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #00ff66, #009933);
+    -fx-background-radius: 8px;
+    -fx-border-color: #66ff99;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.3), 6, 0.3, 0, 0);
+}
+.action-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #33ff85, #00ff66);
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.6), 10, 0.4, 0, 0);
+}
+
+/* КНОПКА АТАКИ — Оставляем агрессивный красный, чтобы выделялась как главное действие */
+.attack-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #ff1744, #b70000);
+    -fx-background-radius: 8px;
+    -fx-border-color: #ff5252;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px 25px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(255, 23, 68, 0.5), 12, 0.4, 0, 0);
+}
+.attack-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff5252, #ff1744);
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(255, 23, 68, 0.8), 15, 0.5, 0, 0);
+}
+
+/* КНОПКА ЗАЩИТЫ */
+.defend-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #00ff66, #009933);
+    -fx-background-radius: 8px;
+    -fx-border-color: #66ff99;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+.defend-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #33ff85, #00ff66);
+    -fx-border-color: #ffffff;
+}
+
+/* КНОПКА ПРЕДМЕТОВ — Насыщенный синий электрик */
+.item-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #00b0ff, #007bb3);
+    -fx-background-radius: 8px;
+    -fx-border-color: #40c4ff;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 176, 255, 0.3), 6, 0.3, 0, 0);
+}
+.item-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #40c4ff, #00b0ff);
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 176, 255, 0.6), 10, 0.4, 0, 0);
+}
+
+/* КНОПКА БЕГСТВА — Стильный темный мох вместо унылого серого */
+.flee-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a3bfa8;
+    -fx-background-color: linear-gradient(to bottom, #112216, #08100b);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(0, 255, 102, 0.4);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+.flee-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #193321, #0d1a11);
+    -fx-border-color: #00ff66;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 102, 0.4), 8, 0.3, 0, 0);
+}
+
+/* ===== ПРАВИЛЬНЫЕ СТИЛИ ДЛЯ PROGRESS BAR (ПЕРЕОПРЕДЕЛЕНИЕ СТРУКТУРЫ) ===== */
+
+/* Здоровье (HP) */
+.health-bar {
+    -fx-background-color: transparent;
+}
+.health-bar .track {
+    -fx-background-color: #1a1010;
+    -fx-background-radius: 6px;
+}
+.health-bar .bar {
+    -fx-background-color: linear-gradient(to right, #ff5252, #ff1744);
+    -fx-background-radius: 6px;
+}
+
+/* Мана (MP) */
+.mana-bar {
+    -fx-background-color: transparent;
+}
+.mana-bar .track {
+    -fx-background-color: #0a1520;
+    -fx-background-radius: 6px;
+}
+.mana-bar .bar {
+    -fx-background-color: linear-gradient(to right, #40c4ff, #00b0ff);
+    -fx-background-radius: 6px;
+}
+
+/* Опыт (EXP) */
+.exp-bar {
+    -fx-background-color: transparent;
+}
+.exp-bar .track {
+    -fx-background-color: #05120a;
+    -fx-background-radius: 6px;
+}
+.exp-bar .bar {
+    -fx-background-color: linear-gradient(to right, #66ff99, #00ff66);
+    -fx-background-radius: 6px;
+}
+
+/* ===== СТАТУС ТЕКСТ ПОД БАРАМИ ===== */
+.status-text  { -fx-font-family: 'Consolas', monospace; -fx-font-size: 12px; -fx-fill: #00ff66; -fx-text-fill: #00ff66; }
+.health-text  { -fx-font-family: 'Consolas', monospace; -fx-font-size: 12px; -fx-fill: #ff5252; -fx-text-fill: #ff5252; }
+.mana-text    { -fx-font-family: 'Consolas', monospace; -fx-font-size: 12px; -fx-fill: #40c4ff; -fx-text-fill: #40c4ff; }
+.exp-text     { -fx-font-family: 'Consolas', monospace; -fx-font-size: 12px; -fx-fill: #66ff99; -fx-text-fill: #66ff99; }
+
+/* ===== КАНАЛ ПРОКРУТКИ (SCROLL PANE ДЛЯ ПРЕДМЕТОВ) ===== */
+.ui-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: rgba(0, 255, 102, 0.4);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+.ui-scroll-pane .scroll-bar:vertical {
+    -fx-background-color: #050a07;
+    -fx-border-color: #00ff66;
+    -fx-border-width: 1px;
+}
+.ui-scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #00ff66;
+    -fx-background-radius: 4px;
+}
+.ui-scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #33ff85;
+}

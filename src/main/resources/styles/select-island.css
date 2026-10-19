@@ -1,0 +1,136 @@
+/* =========================================================================
+   SELECT ISLAND STYLES (Оптимизированная тема главного меню)
+   ========================================================================= */
+
+/* Главный контейнер экрана */
+.select-island-container {
+    -fx-background-color: #1a1a1a;
+    -fx-background-image: url('/texture/main-menu/fon.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-padding: 25px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.4), 15, 0.3, 0, 0);
+}
+
+/* Заголовок "ВЫБОР ОСТРОВА" */
+.select-island-title {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFD700;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 6, 1.0, 2, 2);
+}
+
+/* Подзаголовок */
+.select-island-subtitle {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-text-fill: #E8E8E8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 4, 1.0, 1, 1);
+}
+
+/* Центральная рамка с описанием и кнопками */
+.description-container {
+    -fx-background-color: rgba(20, 20, 20, 0.82); /* Чуть плотнее, чтобы текст лучше читался на фоне */
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 4);
+}
+
+/* Описание внутри контейнера */
+.select-island-description {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-text-fill: #E8E8E8; /* Исправлено: поддержка Label */
+    -fx-fill: #E8E8E8;      /* Исправлено: поддержка Text */
+    -fx-text-alignment: center;
+}
+
+/* Мотивационный текст внизу */
+.select-island-motivation {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #B8D4E3; /* Исправлено для Label */
+    -fx-fill: #B8D4E3;      /* Исправлено для Text */
+    -fx-text-alignment: center;
+    -fx-font-style: italic;
+}
+
+/* =========================================================================
+   КНОПКИ ОСТРОВОВ (БАЗОВЫЙ КЛАСС)
+   ========================================================================= */
+.island-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF !important;
+    -fx-border-width: 3px !important;
+    -fx-border-color: #FFD700 !important;
+    -fx-border-radius: 8px !important;
+    -fx-background-radius: 8px !important;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321) !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 8, 0.0, 0, 3) !important;
+}
+
+/* Состояние при наведении (Общее для всех островов) */
+.island-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0522D, #8B4513) !important;
+    -fx-border-color: #FFA500 !important;
+    -fx-effect: dropshadow(gaussian, rgba(255, 165, 0, 0.4), 10, 0.0, 0, 0) !important;
+}
+
+/* Состояние при клике (Эффект нажатия кнопки) */
+.island-button:pressed, .island-button:armed {
+    -fx-background-color: linear-gradient(to bottom, #5c2d0c, #402812) !important;
+    -fx-border-color: #D2691E !important;
+    -fx-effect: inset dropshadow(gaussian, rgba(0, 0, 0, 0.8), 5, 0.0, 0, 1) !important;
+}
+
+/* Специфичные классы сохранены на случай, если ты захочешь сделать кнопки разноцветными 
+   (например, Java - коричневый, Python - сине-жёлтый, C# - фиолетовый). 
+   Сейчас они просто наследуют базовую логику.
+*/
+.java-button   { -fx-base: inherit; }
+.python-button { -fx-base: inherit; }
+.csharp-button { -fx-base: inherit; }
+
+
+/* =========================================================================
+   ВТОРОСТЕПЕННЫЕ КНОПКИ (Кнопка НАЗАД)
+   ========================================================================= */
+.secondary-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace !important;
+    -fx-font-size: 16px !important;
+    -fx-font-weight: bold !important;
+    -fx-text-fill: #FFFFFF !important;
+    -fx-background-color: linear-gradient(to bottom, #5a5a5a, #3a3a3a) !important;
+    -fx-border-color: #888888 !important;
+    -fx-border-width: 2px !important;
+    -fx-border-radius: 8px !important;
+    -fx-background-radius: 8px !important;
+    -fx-padding: 12px 24px !important;
+    -fx-cursor: hand !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 6, 0.0, 0, 2) !important;
+}
+
+.secondary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #727272, #4a4a4a) !important;
+    -fx-border-color: #AAAAAA !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.0, 0, 2) !important;
+}
+
+.secondary-button:pressed, .secondary-button:armed {
+    -fx-background-color: linear-gradient(to bottom, #3a3a3a, #222222) !important;
+    -fx-border-color: #555555 !important;
+    -fx-effect: inset dropshadow(gaussian, rgba(0, 0, 0, 0.9), 4, 0.0, 0, 1) !important;
+}

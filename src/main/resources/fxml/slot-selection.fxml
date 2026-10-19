@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.codetravel.ui.SlotSelectionController"
+      styleClass="main-container" maxWidth="Infinity" maxHeight="Infinity" 
+      alignment="CENTER" spacing="30">
+    
+    <!-- Заголовок -->
+    <VBox spacing="10" alignment="CENTER">
+        <Label text="CODE TRAVEL" styleClass="game-title" alignment="CENTER"/>
+        <Label text="ВЫБЕРИТЕ ПЕРСОНАЖА" styleClass="subtitle-text" alignment="CENTER"/>
+    </VBox>
+    
+    <!-- Слоты сохранения -->
+    <VBox spacing="15" maxWidth="400" alignment="CENTER">
+        <!-- Слот 1 -->
+        <VBox styleClass="slot-container" spacing="10" alignment="CENTER">
+            <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+                <Label text="СЛОТ 1" styleClass="slot-number" alignment="CENTER"/>
+                <VBox spacing="5" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <Label fx:id="slot1NameLabel" text="[ПУСТО]" styleClass="slot-name" alignment="CENTER_LEFT"/>
+                    <Label fx:id="slot1ClassLabel" text="" styleClass="slot-class" alignment="CENTER_LEFT"/>
+                    <Label fx:id="slot1LevelLabel" text="" styleClass="slot-level" alignment="CENTER_LEFT"/>
+                </VBox>
+                <Button fx:id="slot1Button" text="СОЗДАТЬ" prefWidth="100" prefHeight="35" 
+                        styleClass="primary-button" onAction="#handleSlot1"/>
+            </HBox>
+        </VBox>
+        
+        <!-- Слот 2 -->
+        <VBox styleClass="slot-container" spacing="10" alignment="CENTER">
+            <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+                <Label text="СЛОТ 2" styleClass="slot-number" alignment="CENTER"/>
+                <VBox spacing="5" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <Label fx:id="slot2NameLabel" text="[ПУСТО]" styleClass="slot-name" alignment="CENTER_LEFT"/>
+                    <Label fx:id="slot2ClassLabel" text="" styleClass="slot-class" alignment="CENTER_LEFT"/>
+                    <Label fx:id="slot2LevelLabel" text="" styleClass="slot-level" alignment="CENTER_LEFT"/>
+                </VBox>
+                <Button fx:id="slot2Button" text="СОЗДАТЬ" prefWidth="100" prefHeight="35" 
+                        styleClass="primary-button" onAction="#handleSlot2"/>
+            </HBox>
+        </VBox>
+        
+        <!-- Слот 3 -->
+        <VBox styleClass="slot-container" spacing="10" alignment="CENTER">
+            <HBox spacing="15" alignment="CENTER" maxWidth="Infinity">
+                <Label text="СЛОТ 3" styleClass="slot-number" alignment="CENTER"/>
+                <VBox spacing="5" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <Label fx:id="slot3NameLabel" text="[ПУСТО]" styleClass="slot-name" alignment="CENTER_LEFT"/>
+                    <Label fx:id="slot3ClassLabel" text="" styleClass="slot-class" alignment="CENTER_LEFT"/>
+                    <Label fx:id="slot3LevelLabel" text="" styleClass="slot-level" alignment="CENTER_LEFT"/>
+                </VBox>
+                <Button fx:id="slot3Button" text="СОЗДАТЬ" prefWidth="100" prefHeight="35" 
+                        styleClass="primary-button" onAction="#handleSlot3"/>
+            </HBox>
+        </VBox>
+    </VBox>
+    
+    <!-- Кнопка возврата -->
+    <Button text="НАЗАД" prefWidth="150" prefHeight="40" 
+            styleClass="secondary-button" onAction="#handleBackToMenu"/>
+    
+</VBox>

@@ -1,0 +1,185 @@
+/* =========================================================================
+   СТИЛИ ЭКРАНА АВТОРИЗАЦИИ (Тема главного меню "Code Travel")
+   ========================================================================= */
+
+/* Корневой контейнер сцены */
+.auth-container {
+    -fx-background-color: #1a1a2e;
+    -fx-background-image: url('/texture/main-menu/fon.jpg'), url('/texture/main-menu/framework.png');
+    -fx-background-size: cover, cover;
+    -fx-background-position: center center, center center;
+    -fx-background-repeat: no-repeat, no-repeat;
+    -fx-padding: 0px;
+}
+
+/* Фоновый слой */
+.auth-background {
+    -fx-background-color: transparent;
+}
+
+/* Главный заголовок "CODE TRAVEL" */
+.auth-title {
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFD700;
+    /* Сделали тень более глубокой и смещенной вниз-вправо для объема */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 10, 1.0, 2, 2);
+}
+
+/* Подзаголовок (например, "Вход в систему") */
+.auth-subtitle {
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 6, 1.0, 1, 1);
+}
+
+/* Названия полей (Имя пользователя, Пароль) */
+.field-label {
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 4, 1.0, 0, 1);
+}
+
+/* =========================================================================
+   ПОЛЯ ВВОДА (Inputs)
+   ========================================================================= */
+.text-field, .password-field {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-padding: 12px;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 6, 0.0, 0, 2);
+}
+
+/* Состояние фокуса поля ввода */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #FFA500;
+    -fx-effect: dropshadow(gaussian, rgba(255, 165, 0, 0.5), 8, 0.0, 0, 0);
+}
+
+/* =========================================================================
+   ЭЛЕМЕНТЫ УПРАВЛЕНИЯ (Чекбокс и Ссылка)
+   ========================================================================= */
+
+/* Родовое поле чекбокса */
+.check-box {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 14px;
+    -fx-padding: 4px;
+}
+
+/* Сама квадратная коробочка */
+.check-box .box {
+    -fx-background-color: #2d2d2d;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #FFA500;
+}
+
+/* Коробочка, когда птичка поставлена */
+.check-box:selected .box {
+    -fx-background-color: #FFD700;
+    -fx-border-color: #FFA500;
+}
+
+/* Настройка цвета и формы самой птички (знака) внутри чекбокса */
+.check-box:selected .mark {
+    -fx-background-color: #2d2d2d; /* Контрастный темный цвет галочки на желтом фоне */
+    -fx-shape: "M0,5 L3,8 L10,1 Z"; /* Делает её форму более четкой */
+}
+
+/* Ссылка "Забыли пароль?" */
+.hyperlink {
+    -fx-text-fill: #FFD700;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-underline: true;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 0px;
+}
+
+.hyperlink:hover, .hyperlink:focused {
+    -fx-text-fill: #FFA500;
+    -fx-effect: dropshadow(gaussian, rgba(255, 165, 0, 0.6), 5, 0.0, 0, 0);
+}
+
+/* =========================================================================
+   КНОПКИ (ВОЙТИ / РЕГИСТРАЦИЯ)
+   ========================================================================= */
+.button {
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321);
+    -fx-border-color: #FFD700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 24px;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.0, 0, 3);
+}
+
+/* Наведение мыши на кнопку */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0522D, #8B4513);
+    -fx-border-color: #FFA500;
+    -fx-effect: dropshadow(gaussian, rgba(255, 165, 0, 0.4), 12, 0.0, 0, 0);
+}
+
+/* Клик по кнопке (Эффект нажатия механики) */
+.button:pressed, .button:armed {
+    -fx-background-color: linear-gradient(to bottom, #5c2d0c, #402812);
+    -fx-border-color: #D2691E;
+    -fx-effect: inset dropshadow(gaussian, rgba(0, 0, 0, 0.8), 5, 0.0, 0, 1);
+}
+
+/* =========================================================================
+   ИНФОРМАЦИОННЫЕ ПАНЕЛИ
+   ========================================================================= */
+
+/* Лейбл вывода ошибок аутентификации */
+/* Лейбл вывода ошибок аутентификации */
+.error-label {
+    -fx-text-fill: #FF4444;             /* Чистый красный цвет текста */
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;  /* Никакого заднего фона */
+    -fx-border-color: transparent;      /* Никаких рамок */
+    -fx-padding: 5px;
+    
+    /* ЖЕСТКИЙ СБРОС: принудительно отключаем любые эффекты и свечения */
+    -fx-effect: null; 
+}
+
+/* Текст версии в самом низу */
+.version-text {
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 4, 1.0, 0, 1);
+    -fx-opacity: 0.75;
+}

@@ -1,0 +1,210 @@
+/* =========================================================================
+   Стили для магазина Python острова - СТИЛЬНАЯ КИБЕРПАНК-ЗЕРАЯ СХЕМА
+   ========================================================================= */
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.main-container {
+    -fx-background-color: #0b0e11; /* Глубокий темный, почти черный фон для максимального контраста */
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* ===== ЗАГОЛОВОК МАГАЗИНА ===== */
+.header-section {
+    -fx-background-color: #121820; /* Темный графит с синеватым отливом */
+    -fx-border-color: #2ECC40;
+    -fx-border-width: 0 0 3px 0;
+    -fx-border-style: solid;
+}
+
+.title-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ECC40; /* Яркий неоновый зеленый */
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(46, 204, 64, 0.3), 6, 0.4, 0, 0);
+}
+
+.subtitle-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27AE60; /* Чуть более приглушенный зеленый для монет */
+    -fx-background-color: transparent;
+}
+
+/* ===== КОНТЕНТ И СКРОЛЛ ПАНЕЛЬ ===== */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fit-to-width: true;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+}
+
+/* КРИТИЧЕСКИЙ ФИКС ДЛЯ JAVAFX: убираем дефолтный серый фон внутренности ScrollPane */
+.content-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.content-container {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+/* ===== РАЗДЕЛЫ МАГАЗИНА (Зелья, Предметы, Улучшения) ===== */
+.section-box {
+    -fx-background-color: rgba(20, 29, 22, 0.75); /* Глубокий темно-зеленый полупрозрачный фон */
+    -fx-background-radius: 8px;
+    -fx-border-color: #27AE60; /* Более строгий темно-зеленый бортик */
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px;
+}
+
+.section-title {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ECC40;
+    -fx-background-color: transparent;
+}
+
+/* ===== КАРТОЧКИ ТОВАРОВ ===== */
+.item-card {
+    -fx-background-color: #141a16; /* Очень темный фон карточки, чтобы текст читался идеально */
+    -fx-background-radius: 6px;
+    -fx-border-color: #2ECC40;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px;
+    -fx-spacing: 6px;
+    -fx-alignment: CENTER_LEFT; /* Выравнивание по левому краю для аккуратности */
+}
+
+/* Эффект наведения (Свечение перенесено сюда, чтобы не нагружать процессор статично) */
+.item-card:hover {
+    -fx-background-color: #19221c;
+    -fx-border-color: #2ECC40;
+    -fx-effect: dropshadow(gaussian, rgba(46, 204, 64, 0.4), 8, 0.4, 0, 0);
+}
+
+.item-name {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ECC40;
+    -fx-background-color: transparent;
+}
+
+.item-description {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 11px;
+    -fx-text-fill: #cbd5e1; /* Светло-серый цвет, вместо зеленого, чтобы глаза не уставали */
+    -fx-background-color: transparent;
+    -fx-wrap-text: true;
+}
+
+.item-price {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ECC40;
+    -fx-background-color: transparent;
+}
+
+/* ===== КНОПКИ ПОКУПКИ ===== */
+.buy-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #27AE60; /* Приятный зеленый */
+    -fx-background-radius: 4px;
+    -fx-border-color: #218c4e;
+    -fx-border-width: 0 0 3px 0; /* Игровая 3D-кнопка за счет нижней границы */
+    -fx-border-radius: 4px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+}
+
+.buy-button:hover {
+    -fx-background-color: #2ECC40;
+    -fx-border-color: #27AE60;
+}
+
+.buy-button:pressed {
+    -fx-background-color: #1e7e43;
+    -fx-border-width: 0 0 1px 0; /* Кнопка "вдавливается" при нажатии */
+    -fx-padding: 8px 12px 4px 12px;
+}
+
+.buy-button:disabled {
+    -fx-background-color: #4a5568;
+    -fx-border-color: #2d3748;
+    -fx-text-fill: #a0aec0;
+}
+
+/* ===== КНОПКА ВОЗВРАТА ===== */
+.back-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #78350f; /* Фирменный коричневый стиль из прошлых окон для преемственности */
+    -fx-background-radius: 6px;
+    -fx-border-color: #d97706; /* Золотисто-оранжевая рамка */
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px 18px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(217, 119, 6, 0.2), 4, 0.3, 0, 0);
+}
+
+.back-button:hover {
+    -fx-background-color: #92400e;
+    -fx-border-color: #f59e0b;
+}
+
+/* ===== КАСТОМНЫЙ СКРОЛЛБАР ===== */
+.content-scroll .scroll-bar:vertical {
+    -fx-background-color: #121820;
+    -fx-background-radius: 4px;
+    -fx-width: 8px; /* Делаем его аккуратным и тонким */
+}
+
+.content-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #27AE60;
+    -fx-background-radius: 4px;
+}
+
+.content-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #2ECC40;
+}
+
+/* Убираем стрелочки на концах скроллбара, чтобы не портили минимализм */
+.content-scroll .scroll-bar:vertical .increment-button,
+.content-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ===== УВЕДОМЛЕНИЯ ===== */
+.error-message {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-text-fill: #ff6b6b;
+    -fx-background-color: rgba(255, 107, 107, 0.1);
+    -fx-border-color: #ff6b6b;
+    -fx-border-radius: 4px;
+    -fx-padding: 6px;
+}
+
+.success-message {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-text-fill: #2ECC40;
+    -fx-background-color: rgba(46, 204, 64, 0.1);
+    -fx-border-color: #2ECC40;
+    -fx-border-radius: 4px;
+    -fx-padding: 6px;
+}

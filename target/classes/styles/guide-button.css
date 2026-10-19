@@ -1,0 +1,32 @@
+/* ===== СТИЛЬ КНОПКИ РУКОВОДСТВА ===== */
+
+.guide-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-background-color: linear-gradient(to bottom, #8B4513, #654321);
+    -fx-background-radius: 8px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 8px;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.5, 0, 0);
+    -fx-padding: 12px 24px;
+    -fx-background-image: url('/texture/buttons/guide.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 32px 32px;
+}
+
+.guide-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0522D, #8B4513);
+    -fx-border-color: #FFA500;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1.0), 12, 0.5, 0, 0);
+}
+
+.guide-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #654321, #8B4513);
+    -fx-border-color: #FFD700;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 6, 0.5, 0, 0);
+}

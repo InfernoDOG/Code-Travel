@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.codetravel.ui.AuthController"
+           styleClass="auth-container" maxWidth="Infinity" maxHeight="Infinity">
+    
+    <!-- Фон как в главном меню -->
+    <StackPane styleClass="auth-background">
+        <VBox alignment="CENTER" maxWidth="450" maxHeight="650" spacing="30">
+            <padding>
+                <Insets top="40" right="40" bottom="50" left="40"/>
+            </padding>
+            
+            <!-- Заголовок CODE TRAVEL -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="CODE TRAVEL" styleClass="auth-title"/>
+                <Label text="Вход в систему" styleClass="auth-subtitle"/>
+            </VBox>
+            
+            <!-- Основной контейнер формы -->
+            <VBox fx:id="mainContainer" alignment="CENTER" spacing="20">
+                <padding>
+                    <Insets top="30" right="30" bottom="30" left="30"/>
+                </padding>
+                
+                <!-- Поле имени пользователя -->
+                <VBox spacing="8">
+                    <Label text="Имя пользователя:" styleClass="field-label"/>
+                    <TextField fx:id="usernameField" maxWidth="Infinity"/>
+                </VBox>
+                
+                <!-- Поле пароля -->
+                <VBox spacing="8">
+                    <Label text="Пароль:" styleClass="field-label"/>
+                    <PasswordField fx:id="passwordField" maxWidth="Infinity"/>
+                </VBox>
+                
+                <!-- Checkbox запомнить меня -->
+                <CheckBox fx:id="rememberMeCheckBox" text="Запомнить меня"/>
+                
+                <!-- Кнопки -->
+                <VBox spacing="15">
+                    <Button fx:id="loginButton" text="ВОЙТИ" maxWidth="Infinity" prefHeight="50" onAction="#handleLogin"/>
+                    <Button fx:id="registerButton" text="РЕГИСТРАЦИЯ" maxWidth="Infinity" prefHeight="50" onAction="#handleRegister"/>
+                </VBox>
+                
+                <!-- Ссылка на восстановление пароля -->
+                <HBox alignment="CENTER">
+                    <Hyperlink fx:id="forgotPasswordLink" text="Забыли пароль?" onAction="#handleForgotPassword"/>
+                </HBox>
+                
+                <!-- Сообщение об ошибке -->
+                <Label fx:id="errorLabel" text="" visible="false" wrapText="true" 
+                       maxWidth="Infinity" alignment="CENTER"/>
+            </VBox>
+            
+            <!-- Версия -->
+            <VBox alignment="BOTTOM_CENTER" spacing="5">
+                <Label text="Версия Alpha 1.2" 
+                       styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+                <Label text="Учись программированию в битвах!" 
+                       styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+            </VBox>
+        </VBox>
+    </StackPane>
+    
+</StackPane>

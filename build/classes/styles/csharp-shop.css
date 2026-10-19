@@ -1,0 +1,215 @@
+/* =========================================================================
+   Стили для магазина C# острова - ПРЕМИАЛЬНАЯ НЕОНОВО-ФИОЛЕТОВАЯ СХЕМА
+   ========================================================================= */
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.main-container {
+    -fx-background-color: #0b0713; /* Ультра-темный фиолетовый/угольный фон */
+    -fx-padding: 0;
+}
+
+/* ===== ИСПРАВЛЕНИЕ БАГА СКРОЛЛ-ПАНЕЛИ (Убираем белую подложку JavaFX) ===== */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fit-to-width: true;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+}
+
+/* Жестко перебиваем стандартный viewport Modena темы */
+.content-scroll > .viewport, 
+.content-scroll .content {
+    -fx-background-color: transparent !important;
+}
+
+.content-container {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+/* ===== ЗАГОЛОВОК МАГАЗИНА ===== */
+.header-section {
+    -fx-background-color: #140d24;
+    -fx-border-color: #bd00ff;
+    -fx-border-width: 0 0 3px 0;
+    -fx-padding: 15px;
+}
+
+.title-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #bd00ff;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.6), 12, 0.5, 0, 0);
+}
+
+.subtitle-text {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00e5ff; /* Киберпанк-циан для контраста монет */
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 229, 255, 0.4), 8, 0.4, 0, 0);
+}
+
+/* ===== РАЗДЕЛЫ МАГАЗИНА (Зелья, Предметы, Улучшения) ===== */
+.section-box {
+    -fx-background-color: rgba(20, 13, 36, 0.75);
+    -fx-background-radius: 12px;
+    -fx-border-color: #bd00ff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.25), 10, 0.3, 0, 0);
+    -fx-padding: 15px;
+    -fx-spacing: 12px;
+}
+
+.section-title {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e040fb;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(224, 64, 251, 0.5), 6, 0.4, 0, 0);
+}
+
+/* ===== КАРТОЧКИ ТОВАРОВ ===== */
+.item-card {
+    -fx-background-color: rgba(11, 7, 19, 0.85);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(189, 0, 255, 0.4);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.item-card:hover {
+    -fx-background-color: #1a0f30;
+    -fx-border-color: #bd00ff;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.4), 8, 0.4, 0, 0);
+}
+
+.item-name {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* Белый для идеальной читаемости названия */
+}
+
+.item-description {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #b0a8c3; /* Приглушенный светлый текст */
+    -fx-wrap-text: true;
+}
+
+.item-price {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00e5ff; /* Энергетический синий для цен */
+}
+
+.item-effect {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 11px;
+    -fx-text-fill: #d500f9;
+    -fx-font-style: italic;
+}
+
+/* ===== КНОПКИ ПОКУПКИ (💵) ===== */
+.buy-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: linear-gradient(to bottom, #bd00ff, #7b00a3);
+    -fx-background-radius: 6px;
+    -fx-border-color: #e040fb;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.4), 4, 0.3, 0, 0);
+}
+
+.buy-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #d500f9, #bd00ff);
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.7), 8, 0.5, 0, 0);
+}
+
+.buy-button:pressed {
+    -fx-background-color: #4a0061;
+    -fx-border-color: #7b00a3;
+}
+
+.buy-button:disabled {
+    -fx-background-color: #262130;
+    -fx-border-color: #423b4e;
+    -fx-text-fill: #5a5269;
+    -fx-effect: none;
+}
+
+/* ===== КНОПКА ВОЗВРАТА (Интеграция в общую тему) ===== */
+.back-button {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #211438, #11091f);
+    -fx-background-radius: 8px;
+    -fx-border-color: #bd00ff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.3), 6, 0.3, 0, 0);
+}
+
+.back-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #311e54, #1a0f30);
+    -fx-border-color: #e040fb;
+    -fx-text-fill: #e040fb;
+    -fx-effect: dropshadow(gaussian, rgba(189, 0, 255, 0.6), 10, 0.4, 0, 0);
+}
+
+/* ===== СКРОЛЛ БАР ===== */
+.content-scroll .scroll-bar:vertical {
+    -fx-background-color: #0b0713;
+    -fx-border-color: #bd00ff;
+    -fx-border-width: 0 0 0 1px;
+}
+
+.content-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #bd00ff;
+    -fx-background-radius: 4px;
+}
+
+.content-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #e040fb;
+}
+
+/* ===== СИСТЕМНЫЕ СЛУЖЕБНЫЕ КЛАССЫ ===== */
+.error-message {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-text-fill: #ff1744;
+    -fx-background-color: rgba(255, 23, 68, 0.1);
+    -fx-border-color: #ff1744;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px;
+    -fx-alignment: CENTER;
+}
+
+.success-message {
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-text-fill: #00e5ff;
+    -fx-background-color: rgba(0, 229, 255, 0.1);
+    -fx-border-color: #00e5ff;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px;
+    -fx-alignment: CENTER;
+}

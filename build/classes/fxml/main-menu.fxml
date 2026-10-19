@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.codetravel.ui.MainMenuController"
+           styleClass="main-menu-container" maxWidth="Infinity" maxHeight="Infinity">
+    
+    <!-- СЛОЙ 1: ФОН - растянут на все окно -->
+    <ImageView fx:id="backgroundImage" fitWidth="Infinity" fitHeight="Infinity" 
+               preserveRatio="false" styleClass="background-image"/>
+    
+    <!-- СЛОЙ 2: КОНТЕНТ - центрированный VBox -->
+    <VBox alignment="CENTER" maxWidth="Infinity" maxHeight="Infinity" spacing="40">
+        <padding>
+            <Insets top="60" right="60" bottom="60" left="60"/>
+        </padding>
+        
+        <!-- ЛОГОТИП "CODE TRAVEL" -->
+        <VBox alignment="TOP_CENTER" spacing="20" maxWidth="Infinity" VBox.vgrow="NEVER">
+            <ImageView fx:id="logoImage" fitWidth="400" fitHeight="120" 
+                       preserveRatio="true" styleClass="main-logo"/>
+        </VBox>
+        
+        <!-- КОНТЕЙНЕР ДЛЯ КНОПОК С ФОНОМ -->
+        <StackPane alignment="CENTER" maxWidth="350" maxHeight="Infinity" VBox.vgrow="NEVER">
+            <!-- ФОН ДЛЯ КНОПОК - frame-b.png -->
+            <ImageView fx:id="buttonFrameImage" fitWidth="350" fitHeight="320" 
+                       preserveRatio="false" styleClass="menu-frame"/>
+            
+            <!-- КНОПКИ -->
+            <VBox alignment="CENTER" spacing="20" maxWidth="Infinity">
+                <padding>
+                    <Insets top="15" right="20" bottom="15" left="20"/>
+                </padding>
+                
+                <!-- Кнопка Новой игры -->
+                <Button text="НОВАЯ ИГРА" fx:id="newGameButton" prefWidth="300" prefHeight="50" 
+                       onAction="#handleNewGame" styleClass="menu-button"/>
+                
+                <!-- Кнопка Загрузки игры -->
+                <Button text="ЗАГРУЗИТЬ ИГРУ" fx:id="loadGameButton" prefWidth="300" prefHeight="50" 
+                       onAction="#handleLoadGame" styleClass="menu-button"/>
+                
+                <!-- Кнопка Руководства -->
+                <Button fx:id="guideButton" text="РУКОВОДСТВО" prefWidth="300" prefHeight="50" 
+                       onAction="#handleGuide" styleClass="menu-button"/>
+                
+                <!-- Кнопка Выхода -->
+                <Button text="ВЫХОД" fx:id="exitButton" prefWidth="300" prefHeight="50" 
+                       onAction="#handleExit" styleClass="menu-button"/>
+            </VBox>
+        </StackPane>
+        
+        <!-- ВЕРСИЯ ИГРЫ -->
+        <VBox alignment="BOTTOM_CENTER" spacing="10" maxWidth="Infinity" VBox.vgrow="NEVER">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+            <Label text="Версия Alpha 1.2" 
+                   styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+            <Label text="Учись программированию в битвах!" 
+                   styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+        </VBox>
+    </VBox>
+    
+</StackPane>

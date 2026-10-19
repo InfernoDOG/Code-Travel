@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.codetravel.ui.GuideController"
+           styleClass="auth-container" maxWidth="Infinity" maxHeight="Infinity">
+    
+    <!-- Фон как в главном меню -->
+    <StackPane styleClass="auth-background">
+        <VBox alignment="CENTER" maxWidth="400" maxHeight="800" spacing="15">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <!-- Заголовок -->
+            <Label text="РУКОВОДСТВО" styleClass="auth-title" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+            
+            <!-- Основной контейнер без прокрутки -->
+            <VBox fx:id="contentBox" spacing="10" maxWidth="Infinity" alignment="TOP_CENTER"/>
+            
+            <!-- Контейнер с навигацией -->
+            <HBox alignment="CENTER" spacing="20">
+                <Button fx:id="prevButton" text=" ◀ " onAction="#handlePrevPage" prefWidth="120" prefHeight="40"/>
+                <Label fx:id="pageIndicator" text="1/6" styleClass="page-indicator" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+                <Button fx:id="nextButton" text=" ▶ " onAction="#handleNextPage" prefWidth="120" prefHeight="40"/>
+            </HBox>
+            
+            <!-- Кнопка выхода -->
+            <Button fx:id="backButton" text="НА ГЛАВНУЮ" 
+                   prefWidth="250" prefHeight="50" onAction="#handleBack"/>
+            
+            <!-- Версия -->
+            <VBox alignment="BOTTOM_CENTER" spacing="5">
+                <Label text="Версия Alpha 1.2" 
+                       styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+                <Label text="Учись программированию в битвах!" 
+                       styleClass="version-text" maxWidth="Infinity" wrapText="true" alignment="CENTER"/>
+            </VBox>
+        </VBox>
+    </StackPane>
+    
+</StackPane>
